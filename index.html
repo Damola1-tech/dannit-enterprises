@@ -9,20 +9,17 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--gd:#0D3320;--gm:#1A6B35;--gb:#22883F;--gl:#2EAD52;--gp:#E8F5EC;--gg:#F2FAF4;--gold:#C9972A;--goldl:#E8B84B;--w:#FDFEFE;--g1:#F4F7F5;--g2:#E2EAE5;--g4:#8FA99A;--g6:#4A6356;--tx:#0D2318}
+:root{--gd:#0D3320;--gm:#1A6B35;--gb:#22883F;--gl:#2EAD52;--gp:#E8F5EC;--gg:#F2FAF4;--gold:#C9972A;--goldl:#E8B84B;--w:#FDFEFE;--g1:#F4F7F5;--g2:#E2EAE5;--g4:#8FA99A;--g6:#4A6356;--tx:#0D2318;--red:#C0392B;--redl:#FDEDED}
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--w);color:var(--tx);overflow-x:hidden}
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(13,51,32,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(46,173,82,0.15)}
 .logo{display:flex;align-items:center;gap:.75rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--w);letter-spacing:.06em}
-.logo-seal{width:36px;height:36px;background:var(--gb);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--w);font-weight:700;font-family:'DM Mono',monospace;flex-shrink:0}
 .logo span{color:var(--goldl)}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
 .nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .2s}
 .nav-links a:hover{color:var(--goldl)}
 .nav-cta{background:var(--gb);color:var(--w);border:none;padding:.65rem 1.4rem;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;letter-spacing:.04em;border-radius:2px;transition:background .2s}
 .nav-cta:hover{background:var(--gl)}
-/* HERO */
 .hero{min-height:100vh;background:var(--gd);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;padding:9rem 4rem 5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
 .hg{position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(34,136,63,.22) 0%,transparent 65%);pointer-events:none}
@@ -57,11 +54,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svrd{width:7px;height:7px;background:var(--gl);border-radius:50%;box-shadow:0 0 6px var(--gl)}
 .svrn{color:rgba(255,255,255,.7);font-size:.82rem}
 .svrt{font-family:'DM Mono',monospace;font-size:.65rem;background:rgba(46,173,82,.1);color:#6FCF85;padding:.15rem .5rem;border:1px solid rgba(46,173,82,.2)}
-/* SECTIONS */
 .sec-label{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gm);margin-bottom:.9rem}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;line-height:1.15;color:var(--gd);margin-bottom:.9rem}
 .sec-sub{color:var(--g4);font-size:.97rem;line-height:1.75;max-width:480px;font-weight:300;margin-bottom:3.5rem}
-/* SERVICES */
 .services{padding:7rem 4rem;background:var(--w)}
 .svcg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g2);border-right:none;border-bottom:none}
 .svcc{padding:2.25rem;border-right:1px solid var(--g2);border-bottom:1px solid var(--g2);position:relative;overflow:hidden;cursor:pointer;transition:all .28s;background:var(--w)}
@@ -73,7 +68,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .svf{display:flex;align-items:center;justify-content:space-between}
 .svtg{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gm);background:var(--gp);padding:.25rem .65rem}
 .sarr{font-size:1rem;color:var(--g2);transition:all .28s}
-/* PROCESS */
 .process{padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden}
 .process::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
 .process .sec-label{color:#6FCF85}.process .sec-title{color:var(--w)}.process .sec-sub{color:rgba(255,255,255,.45)}
@@ -83,7 +77,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sti{font-size:1.5rem;margin-bottom:1rem}
 .stt{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--w);margin-bottom:.6rem}
 .sttx{color:rgba(255,255,255,.4);font-size:.83rem;line-height:1.65;font-weight:300}
-/* REGISTER */
 .register{padding:7rem 4rem;background:var(--g1)}
 .regw{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;max-width:1100px;margin:0 auto;align-items:start}
 .wab{margin-top:2rem;background:var(--w);border:1px solid var(--g2);padding:1.25rem 1.5rem;border-left:3px solid #25D366}
@@ -92,41 +85,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .ck{margin-top:2rem;list-style:none}
 .ck li{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--g2);font-size:.85rem;color:var(--g6);line-height:1.5;font-weight:300}
 .ck li::before{content:'✓';color:var(--gb);font-weight:700;flex-shrink:0;margin-top:1px}
-/* FORM CARD */
 .fcard{background:var(--w);border:1px solid var(--g2);box-shadow:0 4px 24px rgba(13,51,32,.06);position:relative}
 .fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gb),var(--gold))}
-/* TYPE SELECTOR */
 .type-selector{padding:2rem 2rem 0}
 .type-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gd);font-weight:600;margin-bottom:.6rem;display:block}
 .type-select{width:100%;padding:.9rem 1rem;border:2px solid var(--gb);background:var(--gp);color:var(--gd);font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;outline:none;border-radius:2px;cursor:pointer;transition:all .2s}
 .type-select:focus{box-shadow:0 0 0 3px rgba(34,136,63,.15)}
 .type-hint{font-size:.75rem;color:var(--gm);margin-top:.4rem;font-weight:400;font-style:italic}
-
-/* ── CAC BUSINESS NATURE SELECTORS ── */
-.biz-nature-wrap{display:none;margin-top:1.1rem;border:1px solid rgba(34,136,63,.25);background:var(--gg);padding:1.1rem 1.25rem;position:relative}
-.biz-nature-wrap.visible{display:block}
-.biz-nature-wrap::before{content:'CAC Classification';position:absolute;top:-10px;left:12px;background:var(--gg);padding:0 .4rem;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);border:1px solid rgba(34,136,63,.2)}
-.biz-nature-wrap .fg{margin-bottom:.85rem}
-.biz-nature-wrap .fg:last-child{margin-bottom:0}
-.biz-nature-wrap label{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gd);font-weight:600;margin-bottom:.35rem;display:block}
-.biz-nature-wrap select{width:100%;padding:.75rem 1rem;border:1px solid var(--g2);background:var(--w);color:var(--tx);font-family:'Outfit',sans-serif;font-size:.86rem;outline:none;transition:border-color .2s,box-shadow .2s;border-radius:2px;cursor:pointer}
-.biz-nature-wrap select:focus{border-color:var(--gb);box-shadow:0 0 0 3px rgba(34,136,63,.08)}
-.biz-nature-wrap .fgh{font-size:.72rem;color:var(--g4);margin-top:.25rem;font-weight:300}
 .specific-wrap{display:none;animation:fadeUp .2s ease}
 .specific-wrap.visible{display:block}
-
-/* STEP TABS */
 .tnav{display:flex;border-bottom:1px solid var(--g2);background:var(--g1);overflow-x:auto}
 .tbtn{flex:1;min-width:90px;padding:.9rem .5rem;text-align:center;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--g4);font-weight:500;font-family:'Outfit',sans-serif;background:transparent;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:.3rem;white-space:nowrap}
 .tbtn.active{color:var(--gm);border-bottom-color:var(--gb);background:var(--w)}
 .tnum{width:20px;height:20px;border-radius:50%;background:var(--g2);color:var(--g4);font-family:'DM Mono',monospace;font-size:.62rem;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
 .tbtn.active .tnum{background:var(--gb);color:white}.tbtn.done .tnum{background:var(--gm);color:white}
-/* FORM BODY */
 .fbody{padding:1.75rem 2rem}
 .fpanel{display:none;animation:fadeUp .25s ease}.fpanel.active{display:block}
-/* DYNAMIC FORM SECTIONS */
 .dyn-section{display:none}.dyn-section.show{display:block}
-/* FIELDS */
 .fg{margin-bottom:1.15rem}
 .fg label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gd);font-weight:600;margin-bottom:.4rem}
 .fg input,.fg select,.fg textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--g2);background:var(--w);color:var(--tx);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s,box-shadow .2s;border-radius:2px}
@@ -135,26 +110,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .fgh{font-size:.73rem;color:var(--g4);margin-top:.3rem;font-weight:300}
 .fgr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .fgr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
-/* SECTION DIVIDERS */
 .fsec{margin:1.5rem 0 1rem;padding:.6rem 1rem;background:var(--gp);border-left:3px solid var(--gb);font-size:.72rem;font-weight:700;color:var(--gm);text-transform:uppercase;letter-spacing:.07em;font-family:'DM Mono',monospace}
-/* PERSON BLOCK */
 .person-block{border:1px solid var(--g2);padding:1.25rem;margin-bottom:1rem;position:relative;background:var(--gg)}
 .person-block-title{font-size:.72rem;font-weight:700;color:var(--gm);text-transform:uppercase;letter-spacing:.07em;font-family:'DM Mono',monospace;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
-/* DOCUMENT NOTICE */
+.btn-remove-person{background:var(--redl);border:1px solid var(--red);color:var(--red);padding:.2rem .55rem;border-radius:2px;font-size:.68rem;font-family:'DM Mono',monospace;cursor:pointer;transition:all .2s;font-weight:600;flex-shrink:0}
+.btn-remove-person:hover{background:var(--red);color:#fff}
+.add-person-row{display:flex;align-items:center;gap:.75rem;margin-top:.5rem;margin-bottom:1rem}
+.btn-add-person{display:flex;align-items:center;gap:.5rem;background:var(--gp);border:1.5px dashed var(--gb);color:var(--gm);padding:.65rem 1.1rem;border-radius:2px;font-size:.8rem;font-family:'Outfit',sans-serif;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.02em}
+.btn-add-person:hover{background:var(--gb);color:#fff;border-style:solid}
+.btn-add-person .plus-icon{width:20px;height:20px;background:var(--gb);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0;transition:background .2s}
+.btn-add-person:hover .plus-icon{background:#fff;color:var(--gb)}
+.director-count-badge{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--g4);background:var(--g2);padding:.2rem .55rem;border-radius:10px}
 .dn{background:var(--gg);border:1px solid rgba(34,136,63,.2);padding:1.25rem 1.5rem;border-left:3px solid var(--gb);margin-bottom:1.5rem}
 .dnt{font-size:.8rem;font-weight:600;color:var(--gd);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em}
 .dn p{font-size:.83rem;color:var(--g6);line-height:1.6;font-weight:300}
 .dl{margin-top:.75rem;list-style:none}
 .dl li{font-size:.82rem;color:var(--g6);padding:.35rem 0;display:flex;align-items:flex-start;gap:.6rem;border-bottom:1px dashed var(--g2);font-weight:300}
-.dl li:last-child{border-bottom:none}.dl li::before{content:'📄';font-size:.8rem;flex-shrink:0;margin-top:1px}
-/* SUMMARY */
+.dl li:last-child{border-bottom:none}.dl li::before{content:'\1F4C4';font-size:.8rem;flex-shrink:0;margin-top:1px}
 .summary-box{background:var(--g1);border:1px solid var(--g2);padding:1.25rem;margin-bottom:1.25rem}
 .summary-box-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gm);font-weight:600;margin-bottom:.75rem;font-family:'DM Mono',monospace}
-/* TERMS */
 .trow{display:flex;align-items:flex-start;gap:.75rem;margin-top:1.25rem;padding:1rem;background:var(--g1);border:1px solid var(--g2)}
 .trow input[type=checkbox]{width:auto;margin-top:3px;accent-color:var(--gb);flex-shrink:0}
 .trow label{font-size:.8rem;color:var(--g6);text-transform:none;letter-spacing:0;font-weight:300;line-height:1.5;cursor:pointer}
-/* FORM FOOTER */
 .ffoot{padding:1.2rem 2rem;border-top:1px solid var(--g1);display:flex;align-items:center;justify-content:space-between;background:var(--g1)}
 .fpl{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--g4);margin-bottom:.4rem}
 .fpdots{display:flex;gap:.4rem}
@@ -166,7 +143,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .bnx:hover{background:var(--gm)}
 .bsb{background:var(--gb);color:var(--w);border:none;padding:.8rem 1.8rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;letter-spacing:.04em;display:none;transition:all .2s}
 .bsb:hover{background:var(--gl)}
-/* TRUST */
+.info-box{background:rgba(201,151,42,.07);border:1px solid rgba(201,151,42,.25);border-left:3px solid var(--gold);padding:.9rem 1.1rem;margin-bottom:1.1rem;font-size:.8rem;color:var(--g6);line-height:1.6;font-weight:300}
+.info-box strong{color:var(--gd)}
 .trust{padding:5.5rem 4rem;background:var(--w);border-top:1px solid var(--g2)}
 .trgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem}
 .trc{padding:1.75rem 1.25rem;border:1px solid var(--g2);transition:border-color .2s,box-shadow .2s;text-align:center}
@@ -174,7 +152,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .tri{font-size:1.6rem;margin-bottom:.75rem}
 .trt{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gd);margin-bottom:.35rem}
 .trd{font-size:.8rem;color:var(--g4);font-weight:300;line-height:1.5}
-/* FOOTER */
 footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(46,173,82,.15)}
 .fb{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--w);letter-spacing:.05em}
 .fb span{color:var(--goldl)}
@@ -182,7 +159,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .fl{display:flex;gap:2rem}
 .fl a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.78rem;transition:color .2s}
 .fl a:hover{color:var(--goldl)}
-/* MODAL */
 .ov{display:none;position:fixed;inset:0;z-index:300;background:rgba(13,51,32,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center}
 .ov.open{display:flex}
 .modal{background:var(--w);max-width:500px;width:92%;padding:3rem 2.5rem;text-align:center;position:relative;animation:fadeUp .35s ease;border-radius:2px}
@@ -195,8 +171,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .mwa strong{color:#128C7E}
 .mcl{background:var(--gb);color:var(--w);border:none;padding:.9rem 2.5rem;border-radius:2px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s}
 .mcl:hover{background:var(--gl)}
-
-/* FAQ SECTION */
 .faq-section{padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden}
 .faq-section::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
 .faq-section .sec-label{color:#6FCF85}
@@ -208,15 +182,13 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .faq-item:hover{background:rgba(46,173,82,.05)}
 .faq-q{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.4rem 1.75rem;cursor:pointer;user-select:none}
 .faq-qt{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--w);line-height:1.3;flex:1}
-.faq-icon{width:30px;height:30px;min-width:30px;border:1px solid rgba(46,173,82,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gl);font-size:1rem;flex-shrink:0;transition:all .25s;font-weight:300;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.faq-icon{width:30px;height:30px;min-width:30px;border:1px solid rgba(46,173,82,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gl);font-size:1rem;flex-shrink:0;transition:all .25s;font-weight:300}
 .faq-item.open .faq-icon{background:var(--gb);border-color:var(--gb);color:#fff;transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .faq-item.open .faq-a{max-height:300px}
 .faq-at{padding:0 1.75rem 1.5rem;color:rgba(255,255,255,.5);font-size:.87rem;line-height:1.8;font-weight:300;border-top:1px solid rgba(46,173,82,.1);padding-top:1rem}
-
-/* CHATBOT BUBBLE */
 .chat-bubble{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
-.chat-btn{width:50px;height:50px;background:var(--gb);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:0 4px 18px rgba(34,136,63,.5);transition:all .22s;position:relative;touch-action:manipulation;-webkit-tap-highlight-color:transparent;flex-shrink:0}
+.chat-btn{width:50px;height:50px;background:var(--gb);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:0 4px 18px rgba(34,136,63,.5);transition:all .22s;position:relative;flex-shrink:0}
 .chat-btn:hover{background:var(--gl);transform:scale(1.07)}
 .chat-badge{position:absolute;top:0;right:0;width:12px;height:12px;background:var(--goldl);border-radius:50%;border:2px solid var(--w);animation:pulse 2s infinite}
 .chat-window{width:300px;background:var(--w);border-radius:14px;box-shadow:0 8px 40px rgba(13,51,32,.22);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--g2);max-height:480px}
@@ -227,7 +199,7 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .chat-hdr-name{color:var(--w);font-size:.82rem;font-weight:600;display:block;line-height:1.2}
 .chat-hdr-status{color:#6FCF85;font-size:.65rem;display:flex;align-items:center;gap:.25rem}
 .chat-hdr-status::before{content:'';width:5px;height:5px;background:#6FCF85;border-radius:50%;display:inline-block;animation:pulse 2s infinite}
-.chat-x{background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:.95rem;padding:.2rem;line-height:1;touch-action:manipulation;transition:color .2s}
+.chat-x{background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:.95rem;padding:.2rem;line-height:1;transition:color .2s}
 .chat-x:hover{color:var(--w)}
 .chat-msgs{flex:1;overflow-y:auto;padding:.8rem;display:flex;flex-direction:column;gap:.6rem;min-height:160px;max-height:260px}
 .msg{max-width:88%;padding:.6rem .85rem;border-radius:12px;font-size:.82rem;line-height:1.55;animation:fadeUp .2s ease;word-break:break-word}
@@ -238,18 +210,23 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 .dot:nth-child(2){animation-delay:.2s}.dot:nth-child(3){animation-delay:.4s}
 @keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
 .chat-sugs{padding:.4rem .8rem;display:flex;flex-wrap:wrap;gap:.3rem;border-top:1px solid var(--g2);flex-shrink:0}
-.sug{background:var(--gp);border:1px solid rgba(34,136,34,.25);color:var(--gm);font-size:.7rem;padding:.28rem .6rem;border-radius:20px;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;white-space:nowrap;touch-action:manipulation}
+.sug{background:var(--gp);border:1px solid rgba(34,136,34,.25);color:var(--gm);font-size:.7rem;padding:.28rem .6rem;border-radius:20px;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;white-space:nowrap}
 .sug:hover{background:var(--gb);color:var(--w);border-color:var(--gb)}
 .chat-inp-row{padding:.6rem .8rem;border-top:1px solid var(--g2);display:flex;gap:.4rem;align-items:center;flex-shrink:0}
 .chat-inp{flex:1;padding:.55rem .8rem;border:1px solid var(--g2);border-radius:20px;font-family:'Outfit',sans-serif;font-size:.82rem;outline:none;transition:border-color .2s;color:var(--tx)}
 .chat-inp:focus{border-color:var(--gb)}
-.chat-send{background:var(--gb);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--w);font-size:.75rem;flex-shrink:0;transition:background .2s;touch-action:manipulation}
+.chat-send{background:var(--gb);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--w);font-size:.75rem;flex-shrink:0;transition:background .2s}
 .chat-send:hover{background:var(--gl)}
-
+.fg select optgroup{font-weight:700;font-size:.75rem;color:var(--gm);background:var(--gp)}
+.fg select option{font-weight:400;background:var(--w);color:var(--tx)}
+.role-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;background:rgba(46,173,82,.1);color:var(--gm);border:1px solid rgba(46,173,82,.25);padding:.15rem .5rem;margin-left:.5rem;vertical-align:middle}
+.add-role-hint{font-size:.72rem;color:var(--g4);font-style:italic;margin-top:.35rem}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeLeft{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
-
-/* MOBILE */
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.person-block.new{animation:slideIn .25s ease}
+/* PSC badge style */
+.psc-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.6rem;background:rgba(201,151,42,.12);color:var(--gold);border:1px solid rgba(201,151,42,.3);padding:.1rem .45rem;margin-left:.4rem;vertical-align:middle;border-radius:2px}
 @media(max-width:960px){
   nav{padding:1rem 1.5rem}.nav-links{display:none}
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem}.hr2{display:none}
@@ -259,20 +236,15 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   footer{flex-direction:column;gap:1.25rem;padding:2rem 1.5rem;text-align:center}
   .fgr,.fgr3{grid-template-columns:1fr}
   .faq-grid{grid-template-columns:1fr}
-  .faq-q{padding:1.2rem 1.25rem;align-items:center}
-  .faq-icon{width:38px;height:38px;min-width:38px;font-size:1.05rem}
   #contact{padding:4rem 1.5rem!important}
   .contact-grid{grid-template-columns:1fr!important;gap:2.5rem!important}
-  .chat-bubble{bottom:1rem;right:1rem}
-  .chat-window{width:calc(100vw - 2rem);max-width:320px}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="logo"><div class="logo-seal">DE</div>DANNIT<span>.</span></div>
+  <div class="logo">DANNIT<span>.</span></div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#process">How It Works</a></li>
@@ -283,7 +255,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   <button class="nav-cta" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Start Registration</button>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hg"></div><div class="hg2"></div>
   <div>
@@ -314,7 +285,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="sec-label">// Our Services</div>
   <h2 class="sec-title">Everything You Need<br>To Be Official</h2>
@@ -329,7 +299,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="process" id="process">
   <div class="sec-label">// How It Works</div>
   <h2 class="sec-title">From Application<br>to Certificate</h2>
@@ -342,7 +311,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </section>
 
-<!-- REGISTER FORM -->
 <section class="register" id="register">
   <div class="regw">
     <div>
@@ -363,7 +331,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
     </div>
 
     <div class="fcard">
-      <!-- TYPE SELECTOR -->
       <div class="type-selector">
         <label class="type-label">Select Registration Type *</label>
         <select class="type-select" id="regType" onchange="onTypeChange(this.value)">
@@ -378,7 +345,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
         <div class="type-hint" id="typeHint">Please select a type to begin filling the form</div>
       </div>
 
-      <!-- STEP TABS -->
       <div class="tnav" id="stepTabs" style="display:none;margin-top:1.5rem">
         <button class="tbtn active" id="tab0"><span class="tnum">1</span><span id="tab0label">Business</span></button>
         <button class="tbtn" id="tab1"><span class="tnum">2</span><span id="tab1label">Applicant</span></button>
@@ -387,185 +353,246 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
 
       <div class="fbody" id="formBody" style="display:none">
 
-        <!-- STEP 1 -->
+        <!-- ══════ STEP 1 ══════ -->
         <div class="fpanel active" id="fp0">
 
           <!-- ══ BUSINESS NAME ══ -->
           <div class="dyn-section" id="sec-bn-biz">
+            <div class="info-box">📌 <strong>Business Name Registration</strong> is for a single individual (sole proprietor). Your personal details are what get registered — the business name is simply a trading name.</div>
             <div class="fsec">🏪 Business Information</div>
             <div class="fg"><label>Preferred Business Name — 1st Choice *</label><input type="text" id="bName1" placeholder="e.g. Dannit Global Services"><div class="fgh">Will be checked for availability at CAC first</div></div>
             <div class="fgr">
               <div class="fg"><label>2nd Choice Name</label><input type="text" id="bName2" placeholder="Alternative name"></div>
               <div class="fg"><label>3rd Choice Name</label><input type="text" id="bName3" placeholder="Alternative name"></div>
             </div>
-
-            <!-- CAC-style Nature of Business -->
             <div class="fg">
               <label>Principal Nature of Business *</label>
               <select id="bnPrincipal" onchange="updateSpecific('bn')">
                 <option value="">— Select principal business category —</option>
-                <option value="agriculture">Agriculture, Forestry & Fishing</option>
-                <option value="mining">Mining & Quarrying</option>
+                <option value="agriculture">Agriculture, Forestry &amp; Fishing</option>
+                <option value="mining">Mining &amp; Quarrying</option>
                 <option value="manufacturing">Manufacturing</option>
-                <option value="utilities">Electricity, Gas & Water Supply</option>
-                <option value="construction">Construction & Building Works</option>
-                <option value="trade">Wholesale & Retail Trade</option>
-                <option value="transport">Transportation & Storage</option>
-                <option value="hospitality">Accommodation, Food & Beverage Services</option>
-                <option value="ict">Information & Communication Technology</option>
-                <option value="finance">Financial & Insurance Services</option>
-                <option value="realestate">Real Estate & Property Services</option>
-                <option value="professional">Professional, Scientific & Technical Services</option>
-                <option value="admin">Administrative & Support Services</option>
-                <option value="education">Education & Training</option>
-                <option value="health">Human Health & Social Work</option>
-                <option value="arts">Arts, Entertainment & Recreation</option>
-                <option value="personal">Other Personal & Service Activities</option>
-                <option value="ngo_rel">Religious & Non-Profit Activities</option>
+                <option value="utilities">Electricity, Gas &amp; Water Supply</option>
+                <option value="construction">Construction &amp; Building Works</option>
+                <option value="trade">Wholesale &amp; Retail Trade</option>
+                <option value="transport">Transportation &amp; Storage</option>
+                <option value="hospitality">Accommodation, Food &amp; Beverage Services</option>
+                <option value="ict">Information &amp; Communication Technology</option>
+                <option value="finance">Financial &amp; Insurance Services</option>
+                <option value="realestate">Real Estate &amp; Property Services</option>
+                <option value="professional">Professional, Scientific &amp; Technical Services</option>
+                <option value="admin">Administrative &amp; Support Services</option>
+                <option value="education">Education &amp; Training</option>
+                <option value="health">Human Health &amp; Social Work</option>
+                <option value="arts">Arts, Entertainment &amp; Recreation</option>
+                <option value="personal">Other Personal &amp; Service Activities</option>
+                <option value="ngo_rel">Religious &amp; Non-Profit Activities</option>
+                <option value="maritime">Maritime &amp; Marine Services</option>
+                <option value="aviation">Aviation &amp; Air Transport</option>
+                <option value="media">Media, Publishing &amp; Broadcasting</option>
               </select>
-              <div class="fgh">Select the broad sector that best describes your business — mirrors CAC portal classification</div>
+              <div class="fgh">Select the broad sector that best describes your business</div>
             </div>
             <div class="specific-wrap" id="bnSpecificWrap">
               <div class="fg">
                 <label>Specific Business Activity *</label>
-                <select id="bnSpecific">
-                  <option value="">— Select specific activity —</option>
-                </select>
-                <div class="fgh">This is the exact activity that will appear on your CAC certificate</div>
+                <select id="bnSpecific"><option value="">— Select specific activity —</option></select>
+                <div class="fgh">This exact activity will appear on your CAC certificate</div>
               </div>
             </div>
-
-            <div class="fg"><label>Business Address *</label><textarea id="bizAddress" placeholder="Full business address including LGA and State"></textarea></div>
+            <div class="fg"><label>Business Address *</label><textarea id="bizAddress" placeholder="Full business address including Street, LGA and State"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>State of Operation *</label>
+                <select id="bnState">
+                  <option value="">Select state...</option>
+                  <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
+                </select>
+              </div>
+              <div class="fg"><label>LGA *</label><input type="text" id="bnLGA" placeholder="Local Government Area"></div>
+            </div>
+            <div class="fg"><label>Commencement Date *</label><input type="date" id="bnCommenceDate"><div class="fgh">The date the business started or intends to start operations</div></div>
           </div>
 
           <!-- ══ LLC ══ -->
           <div class="dyn-section" id="sec-llc-biz">
+            <div class="info-box">📌 <strong>LLC requires at least 2 directors.</strong> You can add up to 20 directors using the + button below. Minimum share capital is ₦100,000. Each director must have a valid government ID.</div>
             <div class="fsec">🏢 Company Information</div>
             <div class="fg"><label>Proposed Company Name — 1st Choice *</label><input type="text" id="llcName1" placeholder="e.g. Dannit Global Ventures Limited"><div class="fgh">Must end with "Limited" or "Ltd"</div></div>
             <div class="fgr">
               <div class="fg"><label>2nd Choice Name</label><input type="text" id="llcName2" placeholder="Alternative name"></div>
-              <div class="fg"><label>3rd Choice Name</label><input type="text" id="llcName3" placeholder="Alternative name"></div>
+              <div class="fg"><label>3rd Choice Name</label><input type="text" id="llcName3" placeholder="Another alternative"></div>
             </div>
-
-            <!-- CAC-style Nature of Business for LLC -->
             <div class="fg">
               <label>Principal Nature of Business / Objects *</label>
               <select id="llcPrincipal" onchange="updateSpecific('llc')">
                 <option value="">— Select principal business category —</option>
-                <option value="agriculture">Agriculture, Forestry & Fishing</option>
-                <option value="mining">Mining & Quarrying</option>
+                <option value="agriculture">Agriculture, Forestry &amp; Fishing</option>
+                <option value="mining">Mining &amp; Quarrying</option>
                 <option value="manufacturing">Manufacturing</option>
-                <option value="utilities">Electricity, Gas & Water Supply</option>
-                <option value="construction">Construction & Building Works</option>
-                <option value="trade">Wholesale & Retail Trade</option>
-                <option value="transport">Transportation & Storage</option>
-                <option value="hospitality">Accommodation, Food & Beverage Services</option>
-                <option value="ict">Information & Communication Technology</option>
-                <option value="finance">Financial & Insurance Services</option>
-                <option value="realestate">Real Estate & Property Services</option>
-                <option value="professional">Professional, Scientific & Technical Services</option>
-                <option value="admin">Administrative & Support Services</option>
-                <option value="education">Education & Training</option>
-                <option value="health">Human Health & Social Work</option>
-                <option value="arts">Arts, Entertainment & Recreation</option>
-                <option value="personal">Other Personal & Service Activities</option>
-                <option value="oilgas">Oil, Gas & Energy</option>
+                <option value="utilities">Electricity, Gas &amp; Water Supply</option>
+                <option value="construction">Construction &amp; Building Works</option>
+                <option value="trade">Wholesale &amp; Retail Trade</option>
+                <option value="transport">Transportation &amp; Storage</option>
+                <option value="hospitality">Accommodation, Food &amp; Beverage Services</option>
+                <option value="ict">Information &amp; Communication Technology</option>
+                <option value="finance">Financial &amp; Insurance Services</option>
+                <option value="realestate">Real Estate &amp; Property Services</option>
+                <option value="professional">Professional, Scientific &amp; Technical Services</option>
+                <option value="admin">Administrative &amp; Support Services</option>
+                <option value="education">Education &amp; Training</option>
+                <option value="health">Human Health &amp; Social Work</option>
+                <option value="arts">Arts, Entertainment &amp; Recreation</option>
+                <option value="personal">Other Personal &amp; Service Activities</option>
+                <option value="oilgas">Oil, Gas &amp; Energy</option>
+                <option value="maritime">Maritime &amp; Marine Services</option>
+                <option value="aviation">Aviation &amp; Air Transport</option>
+                <option value="media">Media, Publishing &amp; Broadcasting</option>
               </select>
-              <div class="fgh">Select the broad sector — mirrors CAC portal classification for LLC objects</div>
             </div>
             <div class="specific-wrap" id="llcSpecificWrap">
               <div class="fg">
                 <label>Specific Company Activity *</label>
-                <select id="llcSpecific">
-                  <option value="">— Select specific activity —</option>
-                </select>
-                <div class="fgh">This defines the objects clause in your Memorandum & Articles of Association</div>
+                <select id="llcSpecific"><option value="">— Select specific activity —</option></select>
+                <div class="fgh">This defines the objects clause in your Memorandum &amp; Articles of Association</div>
               </div>
             </div>
             <div class="fg"><label>Additional Objects / Description</label><textarea id="llcObjects" placeholder="Add any extra objects or description not covered by the selection above..." style="min-height:60px"></textarea></div>
-
             <div class="fgr">
-              <div class="fg"><label>Registered Office Address *</label><textarea id="llcAddress" placeholder="Full registered office address in Nigeria"></textarea></div>
+              <div class="fg"><label>Registered Office Address *</label><textarea id="llcAddress" placeholder="Full registered office address in Nigeria (not P.O. Box)"></textarea></div>
               <div class="fg">
-                <div class="fg"><label>Share Capital (₦) *</label><input type="text" id="llcShareCapital" placeholder="e.g. 100,000"><div class="fgh">Minimum share capital is ₦100,000</div></div>
-                <div class="fg"><label>Number of Directors *</label>
-                  <select id="llcNumDirectors" onchange="renderDirectors()">
-                    <option value="">Select...</option>
-                    <option value="2">2 Directors</option>
-                    <option value="3">3 Directors</option>
-                    <option value="4">4 Directors</option>
-                    <option value="5">5 Directors</option>
+                <div class="fg"><label>State *</label>
+                  <select id="llcState">
+                    <option value="">Select state...</option>
+                    <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
                   </select>
                 </div>
+                <div class="fg"><label>LGA *</label><input type="text" id="llcLGA" placeholder="Local Government Area"></div>
               </div>
             </div>
+            <div class="fgr3">
+              <div class="fg"><label>Authorised Share Capital (₦) *</label><input type="text" id="llcShareCapital" placeholder="e.g. 100,000"><div class="fgh">Minimum ₦100,000</div></div>
+              <div class="fg"><label>Number of Shares *</label><input type="text" id="llcNumShares" placeholder="e.g. 1,000,000 shares"><div class="fgh">Total units of shares issued</div></div>
+              <div class="fg"><label>Share Type *</label>
+                <select id="llcShareType">
+                  <option value="">Select...</option>
+                  <option>Ordinary Shares</option>
+                  <option>Preference Shares</option>
+                  <option>Ordinary &amp; Preference</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg"><label>Company Email Address *</label><input type="email" id="llcEmail" placeholder="Company email address"><div class="fgh">Official email for the company — used on the CAC portal</div></div>
+
+            <div class="fsec">👥 Directors, Shareholders &amp; Company Secretary</div>
+            <div class="info-box" style="margin-bottom:1rem">💡 <strong>How to add people:</strong> Add one block per person. Select their role, then answer the mandatory PSC question for each person. A <strong>PSC (Person with Significant Control)</strong> is anyone holding 25%+ shares or voting rights, or who exercises significant influence over the company — required by CAC under CAMA 2020. <strong>Minimum: 1 director + 1 shareholder</strong> (can be the same person).</div>
             <div id="llcDirectorsWrap"></div>
-            <div class="fg"><label>Company Secretary Name *</label><input type="text" id="llcSecretary" placeholder="Full name of company secretary"></div>
+            <div class="add-person-row">
+              <button type="button" class="btn-add-person" onclick="addDirector()">
+                <span class="plus-icon">+</span> Add Director / Person
+              </button>
+              <span class="director-count-badge" id="dirCountBadge">2 persons added</span>
+            </div>
+            <div class="add-role-hint">Add one block per person. The PSC question must be answered for every person — most majority founders will answer Yes.</div>
           </div>
 
           <!-- ══ PARTNERSHIP ══ -->
           <div class="dyn-section" id="sec-partnership-biz">
+            <div class="info-box">📌 <strong>Partnership Registration</strong> requires at least 2 partners. Each partner's details are filed with CAC. A partnership deed (agreement) is strongly recommended though not strictly required.</div>
             <div class="fsec">🤝 Partnership Information</div>
-            <div class="fg"><label>Partnership / Business Name — 1st Choice *</label><input type="text" id="partName1" placeholder="e.g. Dannit & Associates"></div>
+            <div class="fg"><label>Partnership / Business Name — 1st Choice *</label><input type="text" id="partName1" placeholder="e.g. Dannit &amp; Associates"></div>
             <div class="fgr">
               <div class="fg"><label>2nd Choice Name</label><input type="text" id="partName2" placeholder="Alternative name"></div>
               <div class="fg"><label>3rd Choice Name</label><input type="text" id="partName3" placeholder="Alternative name"></div>
             </div>
-
-            <!-- CAC-style Nature for Partnership -->
             <div class="fg">
               <label>Principal Nature of Business *</label>
               <select id="partPrincipal" onchange="updateSpecific('part')">
                 <option value="">— Select principal business category —</option>
-                <option value="agriculture">Agriculture, Forestry & Fishing</option>
-                <option value="mining">Mining & Quarrying</option>
+                <option value="agriculture">Agriculture, Forestry &amp; Fishing</option>
+                <option value="mining">Mining &amp; Quarrying</option>
                 <option value="manufacturing">Manufacturing</option>
-                <option value="construction">Construction & Building Works</option>
-                <option value="trade">Wholesale & Retail Trade</option>
-                <option value="transport">Transportation & Storage</option>
-                <option value="hospitality">Accommodation, Food & Beverage Services</option>
-                <option value="ict">Information & Communication Technology</option>
-                <option value="finance">Financial & Insurance Services</option>
-                <option value="realestate">Real Estate & Property Services</option>
-                <option value="professional">Professional, Scientific & Technical Services</option>
-                <option value="admin">Administrative & Support Services</option>
-                <option value="education">Education & Training</option>
-                <option value="health">Human Health & Social Work</option>
-                <option value="arts">Arts, Entertainment & Recreation</option>
-                <option value="personal">Other Personal & Service Activities</option>
+                <option value="construction">Construction &amp; Building Works</option>
+                <option value="trade">Wholesale &amp; Retail Trade</option>
+                <option value="transport">Transportation &amp; Storage</option>
+                <option value="hospitality">Accommodation, Food &amp; Beverage Services</option>
+                <option value="ict">Information &amp; Communication Technology</option>
+                <option value="finance">Financial &amp; Insurance Services</option>
+                <option value="realestate">Real Estate &amp; Property Services</option>
+                <option value="professional">Professional, Scientific &amp; Technical Services</option>
+                <option value="admin">Administrative &amp; Support Services</option>
+                <option value="education">Education &amp; Training</option>
+                <option value="health">Human Health &amp; Social Work</option>
+                <option value="arts">Arts, Entertainment &amp; Recreation</option>
+                <option value="personal">Other Personal &amp; Service Activities</option>
               </select>
             </div>
             <div class="specific-wrap" id="partSpecificWrap">
               <div class="fg">
                 <label>Specific Business Activity *</label>
-                <select id="partSpecific">
-                  <option value="">— Select specific activity —</option>
-                </select>
+                <select id="partSpecific"><option value="">— Select specific activity —</option></select>
               </div>
             </div>
-
-            <div class="fg"><label>Principal Place of Business *</label><textarea id="partAddress" placeholder="Full address of the partnership's main office"></textarea></div>
-            <div class="fsec">👥 Partner Details</div>
-            <div class="person-block">
-              <div class="person-block-title">Partner 1</div>
-              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="part1Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part1DOB"></div></div>
-              <div class="fg"><label>Residential Address *</label><input type="text" id="part1Address" placeholder="Home address"></div>
-              <div class="fgr"><div class="fg"><label>Phone Number *</label><input type="tel" id="part1Phone" placeholder="08012345678"></div><div class="fg"><label>Nationality *</label><input type="text" id="part1Nationality" value="Nigerian"></div></div>
-              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="part1IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="part1IDNum" placeholder="ID number"></div></div>
+            <div class="fg"><label>Principal Place of Business *</label><textarea id="partAddress" placeholder="Full address of the partnership's main office (not P.O. Box)"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>State *</label>
+                <select id="partState">
+                  <option value="">Select state...</option>
+                  <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
+                </select>
+              </div>
+              <div class="fg"><label>Date of Commencement *</label><input type="date" id="partCommenceDate"></div>
             </div>
-            <div class="person-block">
-              <div class="person-block-title">Partner 2</div>
-              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="part2Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part2DOB"></div></div>
-              <div class="fg"><label>Residential Address *</label><input type="text" id="part2Address" placeholder="Home address"></div>
-              <div class="fgr"><div class="fg"><label>Phone Number *</label><input type="tel" id="part2Phone" placeholder="08012345678"></div><div class="fg"><label>Nationality *</label><input type="text" id="part2Nationality" value="Nigerian"></div></div>
-              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="part2IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="part2IDNum" placeholder="ID number"></div></div>
+
+            <div class="fsec">👥 Partner Details</div>
+            <div id="partnerBlocksWrap">
+              <div class="person-block" id="partnerBlock_1">
+                <div class="person-block-title">Partner 1 (Lead Partner)</div>
+                <div class="fgr"><div class="fg"><label>Full Legal Name *</label><input type="text" id="part1Name" placeholder="Exactly as on ID"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part1DOB"></div></div>
+                <div class="fgr"><div class="fg"><label>Gender *</label><select id="part1Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div><div class="fg"><label>Occupation *</label><input type="text" id="part1Occ" placeholder="e.g. Trader, Engineer..."></div></div>
+                <div class="fg"><label>Residential Address *</label><input type="text" id="part1Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+                <div class="fgr"><div class="fg"><label>Phone *</label><input type="tel" id="part1Phone" placeholder="08012345678"></div><div class="fg"><label>Email *</label><input type="email" id="part1Email" placeholder="partner@email.com"></div></div>
+                <div class="fgr"><div class="fg"><label>Means of ID *</label>
+                  <select id="part1IDType" onchange="const inp=document.getElementById('part1IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+                    <option value="">— Select —</option>
+                    <option value="NIN">National ID / NIN (Nigerians)</option>
+                    <option value="Passport">International Passport (foreigners)</option>
+                    <option value="Driver's Licence">Driver's Licence</option>
+                    <option value="Voter's Card">Permanent Voter's Card</option>
+                  </select></div>
+                  <div class="fg"><label>NIN / ID Number *</label><input type="text" id="part1IDNum" placeholder="11-digit NIN or Passport number"></div></div>
+                <div class="fg"><label>Profit/Loss Share % *</label><input type="text" id="part1Share" placeholder="e.g. 50%"><div class="fgh">All partners' shares must total 100%</div></div>
+              </div>
+              <div class="person-block" id="partnerBlock_2">
+                <div class="person-block-title">Partner 2</div>
+                <div class="fgr"><div class="fg"><label>Full Legal Name *</label><input type="text" id="part2Name" placeholder="Exactly as on ID"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="part2DOB"></div></div>
+                <div class="fgr"><div class="fg"><label>Gender *</label><select id="part2Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div><div class="fg"><label>Occupation *</label><input type="text" id="part2Occ" placeholder="e.g. Trader, Engineer..."></div></div>
+                <div class="fg"><label>Residential Address *</label><input type="text" id="part2Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+                <div class="fgr"><div class="fg"><label>Phone *</label><input type="tel" id="part2Phone" placeholder="08012345678"></div><div class="fg"><label>Email *</label><input type="email" id="part2Email" placeholder="partner@email.com"></div></div>
+                <div class="fgr"><div class="fg"><label>Means of ID *</label>
+                  <select id="part2IDType" onchange="const inp=document.getElementById('part2IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+                    <option value="">— Select —</option>
+                    <option value="NIN">National ID / NIN (Nigerians)</option>
+                    <option value="Passport">International Passport (foreigners)</option>
+                    <option value="Driver's Licence">Driver's Licence</option>
+                    <option value="Voter's Card">Permanent Voter's Card</option>
+                  </select></div>
+                  <div class="fg"><label>NIN / ID Number *</label><input type="text" id="part2IDNum" placeholder="11-digit NIN or Passport number"></div></div>
+                <div class="fg"><label>Profit/Loss Share % *</label><input type="text" id="part2Share" placeholder="e.g. 50%"></div>
+              </div>
+            </div>
+            <div class="add-person-row">
+              <button type="button" class="btn-add-person" onclick="addPartner()">
+                <span class="plus-icon">+</span> Add Another Partner
+              </button>
+              <span class="director-count-badge" id="partnerCountBadge">2 partners</span>
             </div>
           </div>
 
           <!-- ══ NGO ══ -->
           <div class="dyn-section" id="sec-ngo-biz">
+            <div class="info-box">📌 <strong>Incorporated Trustees</strong> requires at least 2 trustees, a constitution/rules, and a newspaper notice of application. The process takes 3–6 weeks due to mandatory publication. You can add more trustees using the + button.</div>
             <div class="fsec">⛪ Organization Information</div>
-            <div class="fg"><label>Organization Name — 1st Choice *</label><input type="text" id="ngoName1" placeholder="e.g. Dannit Foundation for Youth Development"><div class="fgh">Do not include "Incorporated Trustees" — CAC adds it automatically</div></div>
+            <div class="fg"><label>Organization Name — 1st Choice *</label><input type="text" id="ngoName1" placeholder="e.g. Dannit Foundation for Youth Development"><div class="fgh">Do NOT include "Incorporated Trustees" — CAC adds it automatically</div></div>
             <div class="fgr">
               <div class="fg"><label>2nd Choice Name</label><input type="text" id="ngoName2" placeholder="Alternative name"></div>
               <div class="fg"><label>3rd Choice Name</label><input type="text" id="ngoName3" placeholder="Alternative name"></div>
@@ -573,65 +600,153 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
             <div class="fg"><label>Type of Organization *</label>
               <select id="ngoType">
                 <option value="">Select type...</option>
-                <option>Religious Organization (Church / Mosque)</option>
+                <option>Religious Organization (Church)</option>
+                <option>Religious Organization (Mosque)</option>
                 <option>NGO / Charity / Foundation</option>
                 <option>Community / Social Club</option>
                 <option>Professional Association</option>
                 <option>Educational Institution</option>
+                <option>Trade / Industry Association</option>
+                <option>Youth / Women Organization</option>
                 <option>Other Non-Profit</option>
               </select>
             </div>
-            <div class="fg"><label>Aims & Objectives *</label><textarea id="ngoObjectives" placeholder="State the main aims and objectives of your organization..." style="min-height:100px"></textarea></div>
-            <div class="fg"><label>Registered Address *</label><textarea id="ngoAddress" placeholder="Full registered address of the organization"></textarea></div>
+            <div class="fg"><label>Aims &amp; Objectives *</label><textarea id="ngoObjectives" placeholder="State the main aims and objectives of your organization in detail..." style="min-height:100px"></textarea><div class="fgh">This will form the basis of your organization's constitution</div></div>
+            <div class="fg"><label>Registered Address *</label><textarea id="ngoAddress" placeholder="Full registered address — must be a physical address, not P.O. Box"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>State *</label>
+                <select id="ngoState">
+                  <option value="">Select state...</option>
+                  <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
+                </select>
+              </div>
+              <div class="fg"><label>LGA *</label><input type="text" id="ngoLGA" placeholder="Local Government Area"></div>
+            </div>
             <div class="fgr">
               <div class="fg"><label>Date of Establishment *</label><input type="date" id="ngoEstDate"></div>
               <div class="fg"><label>Newspaper for Publication *</label><input type="text" id="ngoPaper" placeholder="e.g. The Punch, Vanguard, Guardian"><div class="fgh">CAC requires newspaper publication of registration notice</div></div>
             </div>
-            <div class="fsec">👥 Trustees (Minimum 2 Required)</div>
-            <div class="person-block">
-              <div class="person-block-title">Trustee 1 (Chairman / Lead Trustee)</div>
-              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="trustee1Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee1DOB"></div></div>
-              <div class="fgr"><div class="fg"><label>Occupation *</label><input type="text" id="trustee1Occ" placeholder="e.g. Engineer, Pastor, Doctor..."></div><div class="fg"><label>Nationality *</label><input type="text" id="trustee1Nat" value="Nigerian"></div></div>
-              <div class="fg"><label>Residential Address *</label><input type="text" id="trustee1Address" placeholder="Home address"></div>
-              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="trustee1IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="trustee1IDNum" placeholder="ID number"></div></div>
+            <div class="fgr">
+              <div class="fg"><label>Total Membership Count *</label><input type="text" id="ngoMembership" placeholder="e.g. 50 members"><div class="fgh">Approximate number of members/congregation</div></div>
+              <div class="fg"><label>Annual General Meeting (AGM) Month *</label>
+                <select id="ngoAGM">
+                  <option value="">Select month...</option>
+                  <option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option>
+                </select>
+                <div class="fgh">Month when the AGM is held annually</div>
+              </div>
             </div>
-            <div class="person-block">
-              <div class="person-block-title">Trustee 2</div>
-              <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="trustee2Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee2DOB"></div></div>
-              <div class="fgr"><div class="fg"><label>Occupation *</label><input type="text" id="trustee2Occ" placeholder="e.g. Teacher, Accountant..."></div><div class="fg"><label>Nationality *</label><input type="text" id="trustee2Nat" value="Nigerian"></div></div>
-              <div class="fg"><label>Residential Address *</label><input type="text" id="trustee2Address" placeholder="Home address"></div>
-              <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="trustee2IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="trustee2IDNum" placeholder="ID number"></div></div>
+            <div class="fg"><label>Does the organization have a Constitution / Rules? *</label>
+              <select id="ngoHasConstitution">
+                <option value="">Select...</option>
+                <option value="yes">Yes — we have a draft constitution</option>
+                <option value="dannit">No — please help us prepare one (DANNIT will draft)</option>
+              </select>
+            </div>
+
+            <div class="fsec">👥 Trustees (Minimum 2 Required)</div>
+            <div id="trusteeBlocksWrap">
+              <div class="person-block" id="trusteeBlock_1">
+                <div class="person-block-title">Trustee 1 (Lead Trustee)</div>
+                <div class="fgr"><div class="fg"><label>Full Legal Name *</label><input type="text" id="trustee1Name" placeholder="Exactly as on ID"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee1DOB"></div></div>
+                <div class="fgr"><div class="fg"><label>Gender *</label><select id="trustee1Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div><div class="fg"><label>Occupation *</label><input type="text" id="trustee1Occ" placeholder="e.g. Engineer, Pastor, Teacher"></div></div>
+                <div class="fg"><label>Residential Address *</label><input type="text" id="trustee1Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+                <div class="fgr"><div class="fg"><label>Phone *</label><input type="tel" id="trustee1Phone" placeholder="08012345678"></div><div class="fg"><label>Email *</label><input type="email" id="trustee1Email" placeholder="trustee@email.com"></div></div>
+                <div class="fgr"><div class="fg"><label>Means of ID *</label>
+                  <select id="trustee1IDType" onchange="const inp=document.getElementById('trustee1IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+                    <option value="">— Select —</option>
+                    <option value="NIN">National ID / NIN (Nigerians)</option>
+                    <option value="Passport">International Passport (foreigners)</option>
+                    <option value="Driver's Licence">Driver's Licence</option>
+                    <option value="Voter's Card">Permanent Voter's Card</option>
+                  </select></div>
+                  <div class="fg"><label>NIN / ID Number *</label><input type="text" id="trustee1IDNum" placeholder="11-digit NIN or Passport number"></div></div>
+              </div>
+              <div class="person-block" id="trusteeBlock_2">
+                <div class="person-block-title">Trustee 2</div>
+                <div class="fgr"><div class="fg"><label>Full Legal Name *</label><input type="text" id="trustee2Name" placeholder="Exactly as on ID"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="trustee2DOB"></div></div>
+                <div class="fgr"><div class="fg"><label>Gender *</label><select id="trustee2Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div><div class="fg"><label>Occupation *</label><input type="text" id="trustee2Occ" placeholder="e.g. Teacher, Accountant..."></div></div>
+                <div class="fg"><label>Residential Address *</label><input type="text" id="trustee2Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+                <div class="fgr"><div class="fg"><label>Phone *</label><input type="tel" id="trustee2Phone" placeholder="08012345678"></div><div class="fg"><label>Email *</label><input type="email" id="trustee2Email" placeholder="trustee@email.com"></div></div>
+                <div class="fgr"><div class="fg"><label>Means of ID *</label>
+                  <select id="trustee2IDType" onchange="const inp=document.getElementById('trustee2IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+                    <option value="">— Select —</option>
+                    <option value="NIN">National ID / NIN (Nigerians)</option>
+                    <option value="Passport">International Passport (foreigners)</option>
+                    <option value="Driver's Licence">Driver's Licence</option>
+                    <option value="Voter's Card">Permanent Voter's Card</option>
+                  </select></div>
+                  <div class="fg"><label>NIN / ID Number *</label><input type="text" id="trustee2IDNum" placeholder="11-digit NIN or Passport number"></div></div>
+              </div>
+            </div>
+            <div class="add-person-row">
+              <button type="button" class="btn-add-person" onclick="addTrustee()">
+                <span class="plus-icon">+</span> Add Another Trustee
+              </button>
+              <span class="director-count-badge" id="trusteeCountBadge">2 trustees</span>
             </div>
           </div>
 
           <!-- ══ COMPLIANCE ══ -->
           <div class="dyn-section" id="sec-compliance-biz">
+            <div class="info-box">📌 <strong>Post-Registration Compliance</strong> — provide your existing CAC registration details and we handle all filings. Penalties apply for late annual returns so act promptly.</div>
             <div class="fsec">📋 Existing Registration Details</div>
             <div class="fgr">
               <div class="fg"><label>RC / BN Number *</label><input type="text" id="compRCNum" placeholder="e.g. RC123456 or BN123456"><div class="fgh">Your current CAC registration number</div></div>
               <div class="fg"><label>Registered Business / Company Name *</label><input type="text" id="compBizName" placeholder="Full registered name as on certificate"></div>
+            </div>
+            <div class="fgr">
+              <div class="fg"><label>Type of Registration *</label>
+                <select id="compRegCategory">
+                  <option value="">Select type...</option>
+                  <option>Business Name (Sole Proprietorship)</option>
+                  <option>Limited Liability Company (LLC)</option>
+                  <option>Partnership</option>
+                  <option>Incorporated Trustees (NGO / Church)</option>
+                </select>
+              </div>
+              <div class="fg"><label>Date of Original Registration *</label><input type="date" id="compOriginalDate"><div class="fgh">Date shown on your CAC certificate</div></div>
             </div>
             <div class="fg"><label>Type of Compliance / Filing Required *</label>
               <select id="compType">
                 <option value="">Select filing type...</option>
                 <option>Annual Return (Business Name)</option>
                 <option>Annual Return (Company / LLC)</option>
-                <option>Change of Business Address</option>
+                <option>Change of Business / Company Address</option>
                 <option>Change / Addition of Director</option>
+                <option>Removal of Director</option>
                 <option>Change of Company Name</option>
                 <option>Change of Shareholders</option>
                 <option>Increase in Share Capital</option>
                 <option>Change of Registered Trustee</option>
+                <option>Change of Business Nature / Objects</option>
                 <option>Winding Up / Dissolution</option>
-                <option>Other (specify in notes)</option>
+                <option>Extraction of CAC Documents / Status Report</option>
+                <option>Other (specify in notes below)</option>
               </select>
             </div>
-            <div class="fg"><label>Year(s) of Annual Return (if applicable)</label><input type="text" id="compYears" placeholder="e.g. 2021, 2022, 2023"></div>
-            <div class="fg"><label>Details / Special Instructions *</label><textarea id="compDetails" placeholder="Describe exactly what changes or filings are needed..." style="min-height:100px"></textarea></div>
+            <div class="fg"><label>Year(s) of Annual Return (if applicable)</label><input type="text" id="compYears" placeholder="e.g. 2021, 2022, 2023"><div class="fgh">List all outstanding years</div></div>
+            <div class="fg"><label>Current Registered Address *</label><textarea id="compCurrentAddress" placeholder="Full current registered address on file with CAC" style="min-height:60px"></textarea></div>
+            <div class="fg"><label>New Address (if change of address filing)</label><textarea id="compNewAddress" placeholder="New address to update in CAC records (only if change of address)" style="min-height:60px"></textarea></div>
+            <div class="fg"><label>Director / Partner / Proprietor Name *</label><input type="text" id="compDirectorName" placeholder="Full name of the authorized signatory"><div class="fgh">Name of the director, proprietor, or trustee authorizing this filing</div></div>
+            <div class="fgr">
+              <div class="fg"><label>Means of ID (Authorizing Person) *</label>
+                <select id="compIDType" onchange="const inp=document.getElementById('compIDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+                  <option value="">— Select ID type —</option>
+                  <option value="NIN">National ID — NIN (Nigerian citizens)</option>
+                  <option value="Passport">International Passport (foreign nationals)</option>
+                  <option value="Driver's Licence">Driver's Licence</option>
+                  <option value="Voter's Card">Permanent Voter's Card</option>
+                </select>
+              </div>
+              <div class="fg"><label>NIN / ID Number *</label><input type="text" id="compIDNum" placeholder="11-digit NIN or Passport number"></div>
+            </div>
+            <div class="fg"><label>Details / Special Instructions *</label><textarea id="compDetails" placeholder="Describe exactly what changes or filings are needed. Include all relevant details..." style="min-height:100px"></textarea></div>
           </div>
 
           <!-- ══ SEARCH ══ -->
           <div class="dyn-section" id="sec-search-biz">
+            <div class="info-box">📌 <strong>Name Search</strong> checks availability at CAC before you commit to full registration. Results are typically ready within a few hours on business days. No documents required.</div>
             <div class="fsec">🔍 Names to Search</div>
             <div class="fg"><label>Business Name — 1st Choice *</label><input type="text" id="searchName1" placeholder="Your preferred business name"><div class="fgh">We will check if this name is available at CAC</div></div>
             <div class="fg"><label>Business Name — 2nd Choice</label><input type="text" id="searchName2" placeholder="Alternative name to check"></div>
@@ -645,42 +760,39 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
                 <option>Incorporated Trustees (NGO / Church)</option>
               </select>
             </div>
-
-            <!-- CAC-style Nature for Search -->
             <div class="fg">
               <label>Principal Nature of Business</label>
               <select id="searchPrincipal" onchange="updateSpecific('search')">
                 <option value="">— Select principal category (optional) —</option>
-                <option value="agriculture">Agriculture, Forestry & Fishing</option>
+                <option value="agriculture">Agriculture, Forestry &amp; Fishing</option>
                 <option value="manufacturing">Manufacturing</option>
-                <option value="construction">Construction & Building Works</option>
-                <option value="trade">Wholesale & Retail Trade</option>
-                <option value="transport">Transportation & Storage</option>
-                <option value="hospitality">Accommodation, Food & Beverage Services</option>
-                <option value="ict">Information & Communication Technology</option>
-                <option value="finance">Financial & Insurance Services</option>
-                <option value="realestate">Real Estate & Property Services</option>
-                <option value="professional">Professional, Scientific & Technical Services</option>
-                <option value="admin">Administrative & Support Services</option>
-                <option value="education">Education & Training</option>
-                <option value="health">Human Health & Social Work</option>
-                <option value="arts">Arts, Entertainment & Recreation</option>
-                <option value="personal">Other Personal & Service Activities</option>
+                <option value="construction">Construction &amp; Building Works</option>
+                <option value="trade">Wholesale &amp; Retail Trade</option>
+                <option value="transport">Transportation &amp; Storage</option>
+                <option value="hospitality">Accommodation, Food &amp; Beverage Services</option>
+                <option value="ict">Information &amp; Communication Technology</option>
+                <option value="finance">Financial &amp; Insurance Services</option>
+                <option value="realestate">Real Estate &amp; Property Services</option>
+                <option value="professional">Professional, Scientific &amp; Technical Services</option>
+                <option value="admin">Administrative &amp; Support Services</option>
+                <option value="education">Education &amp; Training</option>
+                <option value="health">Human Health &amp; Social Work</option>
+                <option value="arts">Arts, Entertainment &amp; Recreation</option>
+                <option value="personal">Other Personal &amp; Service Activities</option>
               </select>
             </div>
             <div class="specific-wrap" id="searchSpecificWrap">
               <div class="fg">
                 <label>Specific Business Activity</label>
-                <select id="searchSpecific">
-                  <option value="">— Select specific activity —</option>
-                </select>
+                <select id="searchSpecific"><option value="">— Select specific activity —</option></select>
               </div>
             </div>
+            <div class="fg"><label>Any specific concerns about name similarity?</label><textarea id="searchConcerns" placeholder="e.g. 'There's already a similar name — please check if ours is different enough'" style="min-height:60px"></textarea></div>
           </div>
 
         </div><!-- end fp0 -->
 
-        <!-- STEP 2 -->
+        <!-- ══════ STEP 2 ══════ -->
         <div class="fpanel" id="fp1">
           <div class="fsec">👤 Your Details (Applicant / Contact Person)</div>
           <div class="fgr">
@@ -692,19 +804,49 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
             <div class="fg"><label>Phone Number *</label><input type="tel" id="phone" placeholder="08012345678"></div>
             <div class="fg"><label>WhatsApp Number *</label><input type="tel" id="whatsapp" placeholder="08012345678"><div class="fgh">We'll contact you here for documents</div></div>
           </div>
+
+          <!-- BN Proprietor fields -->
           <div class="dyn-section" id="sec-bn-applicant">
             <div class="fsec">📋 Proprietor Details</div>
             <div class="fgr">
               <div class="fg"><label>Date of Birth *</label><input type="date" id="dob"></div>
-              <div class="fg"><label>Nationality *</label><input type="text" id="nationality" value="Nigerian"></div>
+              <div class="fg"><label>Gender *</label><select id="bnGender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div>
             </div>
-            <div class="fg"><label>Residential Address *</label><textarea id="resAddress" placeholder="Your full home address"></textarea></div>
             <div class="fgr">
-              <div class="fg"><label>Means of ID *</label><select id="idType"><option value="">Select ID type...</option><option>National ID (NIN Slip)</option><option>International Passport</option><option>Driver's Licence</option><option>Permanent Voter's Card</option></select></div>
-              <div class="fg"><label>ID Number *</label><input type="text" id="idNum" placeholder="Enter your ID number"></div>
+              <div class="fg"><label>Nationality *</label><input type="text" id="nationality" value="Nigerian"></div>
+              <div class="fg"><label>Marital Status *</label><select id="bnMarital"><option value="">Select...</option><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option></select></div>
+            </div>
+            <div class="fg"><label>Residential Address *</label><textarea id="resAddress" placeholder="Your full home address including LGA and State"></textarea></div>
+            <div class="fgr">
+              <div class="fg"><label>State of Residence *</label>
+                <select id="bnResState">
+                  <option value="">Select state...</option>
+                  <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option>
+                </select>
+              </div>
+              <div class="fg"><label>LGA of Residence *</label><input type="text" id="bnResLGA" placeholder="Local Government Area"></div>
+            </div>
+            <div class="fgr">
+              <div class="fg"><label>Means of ID *</label>
+                <select id="idType" onchange="
+                  const inp=document.getElementById('idNum');
+                  const hint=document.getElementById('idNumHint');
+                  if(this.value==='Passport'){inp.placeholder='Passport number e.g. A12345678';hint.textContent='Foreign nationals: enter your Passport number';}
+                  else{inp.placeholder='11-digit NIN e.g. 12345678901';hint.textContent='For Nigerian citizens, your NIN is your ID number — no separate ID number needed';}
+                ">
+                  <option value="">— Select ID type —</option>
+                  <option value="NIN">National ID — NIN (Nigerian citizens)</option>
+                  <option value="Passport">International Passport (foreign nationals)</option>
+                  <option value="Driver's Licence">Driver's Licence</option>
+                  <option value="Voter's Card">Permanent Voter's Card</option>
+                </select>
+              </div>
+              <div class="fg"><label>NIN / ID Number *</label><input type="text" id="idNum" placeholder="11-digit NIN e.g. 12345678901"><div class="fgh" id="idNumHint">For Nigerian citizens, your NIN is your ID number</div></div>
             </div>
             <div class="fg"><label>Occupation *</label><input type="text" id="bnOccupation" placeholder="Your occupation / profession"></div>
           </div>
+
+          <!-- Other types applicant -->
           <div class="dyn-section" id="sec-other-applicant">
             <div class="fg"><label>Your Role / Relationship to the Entity *</label>
               <select id="applicantRole">
@@ -720,11 +862,11 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
           </div>
         </div><!-- end fp1 -->
 
-        <!-- STEP 3 -->
+        <!-- ══════ STEP 3 ══════ -->
         <div class="fpanel" id="fp2">
           <div class="dn" id="docNotice">
             <div class="dnt">📲 Documents to Send via WhatsApp After Submission</div>
-            <p>You don't upload here. After submitting, click the WhatsApp button and send these documents to our team:</p>
+            <p style="margin-bottom:.75rem;font-size:.85rem">After submitting this form, our team will contact you on WhatsApp. Please have these documents ready to send as <strong>clear photos or scans</strong>:</p>
             <ul class="dl" id="docList"></ul>
           </div>
           <div class="summary-box">
@@ -755,21 +897,19 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </section>
 
-<!-- TRUST -->
 <section class="trust">
   <div style="text-align:center">
     <div class="sec-label" style="text-align:center">// Why Choose DANNIT</div>
     <h2 class="sec-title" style="text-align:center;max-width:100%">Trusted by Hundreds Across Nigeria</h2>
   </div>
   <div class="trgrid">
-    <div class="trc"><div class="tri">🔐</div><div class="trt">Secure & Private</div><div class="trd">Your data and documents are handled with strict confidentiality</div></div>
+    <div class="trc"><div class="tri">🔐</div><div class="trt">Secure &amp; Private</div><div class="trd">Your data and documents are handled with strict confidentiality</div></div>
     <div class="trc"><div class="tri">⚡</div><div class="trt">Fast Turnaround</div><div class="trd">Most registrations done within 24–72 hours of receiving documents</div></div>
     <div class="trc"><div class="tri">🎓</div><div class="trt">Expert Handling</div><div class="trd">Experienced professionals who know the CAC process inside out</div></div>
     <div class="trc"><div class="tri">📞</div><div class="trt">Real Support</div><div class="trd">Dedicated human support via WhatsApp, email and phone calls</div></div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="faq-inner">
     <div class="sec-label">// Common Questions</div>
@@ -782,15 +922,16 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">Do I need to visit any office in person?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">No — everything is 100% remote. Fill the form online, send documents via WhatsApp, and receive your certificate by email. You never need to visit our office or any CAC branch.</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">What documents do I need for Business Name registration?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">You need: (1) Valid government-issued photo ID — NIN slip, International Passport, Driver's Licence, or Voter's Card. (2) Recent passport photograph with white background. (3) Proof of address — utility bill not older than 3 months. That's it!</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">Can my preferred business name be rejected?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">Yes — CAC rejects names already taken, too similar to existing names, or potentially misleading. That's why we ask for 3 name options and check availability before filing. You can also use our Name Search service to verify beforehand.</div></div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">What is a PSC (Person with Significant Control)?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">A PSC is any individual who holds more than 25% of shares or voting rights in a company, or who otherwise exercises significant influence or control over the company. Under CAMA 2020, companies are required to identify and register their PSCs with CAC. Most majority shareholders and founders qualify as PSCs.</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">What is Incorporated Trustees and who needs it?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">It's the CAC registration for non-profit organizations — churches, mosques, NGOs, charities, community groups, and professional associations. It requires at least 2 trustees, a constitution, and a newspaper publication notice.</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">What happens after I submit the form?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">You receive a unique reference number immediately. Our team contacts you on WhatsApp (usually within a few hours on business days) to collect your documents and confirm next steps. We then file with CAC and keep you updated until your certificate is ready.</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">Do I need to file annual returns after registration?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">Yes. CAC requires all registered businesses to file annual returns every year to remain active. Failure to do so attracts penalties and can lead to delisting. We offer Post-Registration Compliance services to handle this for you.</div></div></div>
       <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">Is my personal information safe with you?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">Absolutely. Your personal details and documents are used solely for CAC registration and handled with strict confidentiality. We do not share your information with any third party other than the CAC portal as required for filing.</div></div></div>
+      <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-q"><span class="faq-qt">When do I pay, and what payment methods are accepted?</span><span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-at">Payment is made after you submit this form and our team confirms your application details via WhatsApp. We accept bank transfers and mobile payments. Our fees cover the full registration process — CAC government fees, filing, and follow-up are all included. Contact us on WhatsApp for a current price quote before committing.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" style="padding:7rem 4rem;background:var(--gd);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(46,173,82,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(46,173,82,.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none"></div>
   <div class="contact-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative">
@@ -829,7 +970,7 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
         <div style="margin-bottom:1rem"><label style="display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:.4rem">Topic *</label>
           <select id="cTopic" style="width:100%;padding:.8rem 1rem;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;appearance:none;transition:border-color .2s;border-radius:2px" onfocus="this.style.borderColor='var(--gb)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'">
             <option value="" style="background:#0D3320">Select topic...</option>
-            <option value="Pricing enquiry" style="background:#0D3320">Pricing & Fees</option>
+            <option value="Pricing enquiry" style="background:#0D3320">Pricing &amp; Fees</option>
             <option value="Business Name enquiry" style="background:#0D3320">Business Name Registration</option>
             <option value="LLC enquiry" style="background:#0D3320">Limited Liability Company</option>
             <option value="NGO enquiry" style="background:#0D3320">NGO / Church / Trustees</option>
@@ -849,7 +990,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="fb">DANNIT<span>.</span> ENTERPRISES</div>
   <div class="fc">© 2026 DANNIT ENTERPRISES. CAC Registration Services. Nigeria.</div>
@@ -860,7 +1000,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </footer>
 
-<!-- SUCCESS MODAL -->
 <div class="ov" id="overlay">
   <div class="modal">
     <div class="mseal">✅</div>
@@ -873,7 +1012,6 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   </div>
 </div>
 
-<!-- CHATBOT -->
 <div class="chat-bubble" id="chatBubble">
   <div class="chat-window" id="chatWindow">
     <div class="chat-hdr">
@@ -909,450 +1047,36 @@ const EMAIL_2 = 'dannitenterprises@gmail.com';
 const WA_NUMBER = '2347068655350';
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
-// ══════════════════════════════════════════
-// CAC NATURE OF BUSINESS — Principal → Specific
-// Mirrors the two-level classification on the CAC portal
-// ══════════════════════════════════════════
 const CAC_BUSINESS_MAP = {
-  agriculture: [
-    'Abattoir and meat selling services',
-    'Animal husbandry services',
-    'Aquarium services',
-    'Aviary services',
-    'Borehole drilling and water works',
-    'Crop and animal production, hunting and related services activities',
-    'Environmental and landscaping services',
-    'Farming',
-    'Fish farming / aquaculture',
-    'Fishing and aquaculture',
-    'Forestry and logging',
-    'Gardening services',
-    'Honey processing',
-    'Horticulture services',
-    'Kennel services',
-    'Livestock feeds production and distribution',
-    'Livestock management services',
-    'Piggery services',
-    'Poultry services',
-    'Sale of agricultural produce',
-    'Sale of agricultural tools, machine and allied products',
-    'Sale of animals',
-    'Sale of veterinary equipment and drugs',
-    'Sawmilling services',
-    'Veterinary activities',
-    'Veterinary services',
-  ],
-  mining: [
-    'Extraction of crude petroleum and natural gas',
-    'Geosciences services',
-    'Mining and grinding services',
-    'Mining of coal and lignite',
-    'Mining of metal ores',
-    'Mining support services activities',
-    'Oil and gas services',
-    'Other mining and quarrying',
-  ],
-  manufacturing: [
-    'Aluminum manufacturing, works, sales and fittings',
-    'Bakery services',
-    'Block industry',
-    'Brewery services',
-    'Food production and processing services',
-    'Fruits / fruit juice production and sales',
-    'Gold smiting services',
-    'Manufacture of basic metals',
-    'Manufacture of basic pharmaceutical products and pharmaceutical preparations',
-    'Manufacture of beverages',
-    'Manufacture of chemicals and chemical products',
-    'Manufacture of coke and refined petroleum products',
-    'Manufacture of computer, electronic and optical products',
-    'Manufacture of electrical equipment',
-    'Manufacture of fabricated metal products, except machinery and equipment',
-    'Manufacture of food products',
-    'Manufacture of furniture',
-    'Manufacture of leather and equipment N.E.C',
-    'Manufacture of motor vehicles, trailers and semi-trailers',
-    'Manufacture of other transport equipment',
-    'Manufacture of paper and paper products',
-    'Manufacture of rubber and plastic products',
-    'Manufacture of textiles',
-    'Manufacture of tobacco products',
-    'Manufacture of wearing apparel',
-    'Manufacture of wood and products of wood and cork, except furniture',
-    'Manufacturing of candles and associated products',
-    'Manufacturing of plastic products',
-    'Manufacturing services',
-    'Metal works',
-    'Milling and grinding services',
-    'Other manufacturing',
-    'Plastic manufacturing services',
-    'Printing and reproduction of recorded media',
-    'Printing press',
-    'Production and sale of bottled and packaged water',
-    'Production and sale of cooking or edible oil',
-    'Production and sale of polythene bags',
-    'Production and sale of tiles and ceramic products',
-    'Production and sales of footwear',
-    'Production, supply, sale and installation of electrical and electronic equipment',
-    'Production / sales of ceramics and tiles',
-    'Recycling services',
-    'Sale and manufacturing cosmetics',
-    'Sale and manufacturing of carpets',
-    'Sale and production of footwears',
-    'Steal works services',
-    'Supply, sale and distribution of building materials',
-    'Textile services',
-    'Upholstery and furniture making',
-    'Welding services',
-  ],
-  utilities: [
-    'Electricity, gas, steam and air conditioning supply',
-    'Energy production',
-    'Hydro electrical work',
-    'Production and distribution of renewable energy',
-    'Sewerage',
-    'Solar energy',
-    'Supply, sales and services of solar equipment and inverters',
-    'Water collection treatment and supply',
-    'Waterproofing',
-  ],
-  construction: [
-    'Architectural and engineering activities, technical testing and analysis',
-    'Architectural practice and consultancy',
-    'Black smith services',
-    'Bricklaying / masonry services',
-    'Building works',
-    'Carpentry / upholstery services',
-    'Civil engineering',
-    'Civil engineering services',
-    'Construction of buildings',
-    'Electrical engineering services',
-    'Electrical services',
-    'Estate and facility management',
-    'Glass works',
-    'Interior / exterior decoration services',
-    'Mechanical works',
-    'Painting',
-    'Painting services',
-    'Plant and equipment management',
-    'Plumbing services',
-    'Property development services',
-    'Property management services',
-    'Quantity surveying',
-    'Repair and installation of machinery and equipment',
-    'Service to building and landscape activities',
-    'Specialized construction activities',
-    'Supply of hardware',
-    'Town planning services',
-  ],
-  trade: [
-    'Boutique services',
-    'Commission agency',
-    'Deal in general goods and manufacturers representatives',
-    'Deal in hot drinks',
-    'Deal in jewelry and accessories',
-    'Deal in soft drinks',
-    'Deal in wines, drinks and beverages',
-    'Events management, general merchandise, wholesale and retail trade',
-    'Frozen foods services',
-    'General contract and merchandise',
-    'General contract',
-    'General merchandise',
-    'Hardware supply',
-    'Import and export of general goods',
-    'Manufacturers representation',
-    'Manufacturers representation, import, export and general merchandise',
-    'Operate confectionary shop',
-    'Operate departmental stores',
-    'Operate fast food outlet',
-    'Operate supermarkets',
-    'Retail trade, except of motor vehicle and motorcycles',
-    'Sale and distribution of textile materials',
-    'Sale and manufacturing cosmetics',
-    'Sale and supply of cameras, projectors, and photography accessories',
-    'Sale of automobile spare parts',
-    'Sale of computer, laptops, printers, photocopies and their accessories',
-    'Sale of dairy products',
-    'Sale of engineering equipment, machinery and other hardware',
-    'Sale of fire and safety equipment',
-    'Sale of groceries',
-    'Sale of mobile phones and accessories',
-    'Sale of motor vehicle, motorcycles and other automobile products',
-    'Sale of petroleum products',
-    'Sale of sim cards credit / recharge cards',
-    'Sale of sport equipment',
-    'Sale of telecommunication accessories',
-    'Sale / distribution of petroleum products',
-    'Sales and supply of hospital optical and laboratory equipment',
-    'Sales and supply of iron seals and metals',
-    'Sales of automobiles and spare parts',
-    'Sales of books and stationaries',
-    'Trading',
-    'Wholesale and retail trade and repair of motor vehicles and motorcycles',
-    'Wholesale trade, except of motor vehicle and motorcycle',
-  ],
-  transport: [
-    'Air transport',
-    'Automobile / mechanical services',
-    'Automobile repairs / mechanical services',
-    'Automobile towing services',
-    'Automated car wash services',
-    'Boat and canoe construction',
-    'Car wash services',
-    'Clearing and forwarding services',
-    'Land transport and transport via pipelines',
-    'Maintenance and repair of refrigerator and air condition',
-    'Panel beating / car spraying services',
-    'Postal and courier activities',
-    'Rail and tram services',
-    'Repair of computers and personal and household goods',
-    'Road transportation services',
-    'Sea transport',
-    'Truck and haulage services',
-    'Vulcanizing services',
-    'Warehousing and support activities for transportation',
-    'Water transport',
-    'Wheel balancing and alignment services',
-  ],
-  hospitality: [
-    'Accommodation',
-    'Bar services',
-    'Catering services',
-    'Cold room services',
-    'Event planning',
-    'Events management / planning',
-    'Food and beverages services activities',
-    'Hotel and hospitality',
-    'Hotel / hospitality services',
-    'Hotel reservation services',
-    'Operate restaurant and catering services',
-    'Operate viewing center',
-    'Parks and recreation services',
-    'Restaurant',
-    'Spa treatment services',
-    'Sport activities and amusement and recreation activities',
-    'Sport promotion services',
-    'Travel agency',
-    'Travel agency, tour operator and other reservation services and related activities',
-    'Video CD rental services',
-  ],
-  ict: [
-    'Bulk SMS services',
-    'Computer programming, consultancy and related activities',
-    'Cybercafe and business center',
-    'Film production services',
-    'Graphic designing',
-    'ICT training and consultancy',
-    'Information service activities',
-    'Installation of CCTV and allied products',
-    'Internet services',
-    'IT others',
-    'Motion picture, video and television program production, sound recording',
-    'Music production',
-    'Network services',
-    'Photography services',
-    'Programming and broadcasting activities',
-    'Radio and television services',
-    'Repair of computers and personal and household goods',
-    'Software development',
-    'Software development, web design and intranet development',
-    'Telecommunications',
-  ],
-  finance: [
-    'Accounting / auditing consultancy',
-    'Accounting / auditing, taxation and financial management consultancy',
-    'Activities auxiliary to financial services and insurance activities',
-    'Banking and finance',
-    'Financial consultancy',
-    'Financial services activities, except insurance and pension funding',
-    'Forensic accounting services',
-    'Insurance',
-    'Insurance consultancy services',
-    'Insurance, reinsurance and pension funding, except compulsory social security',
-    'Private equity fund',
-    'Tax consultancy',
-  ],
-  realestate: [
-    'Estate agency',
-    'Estate and facility management',
-    'Estate surveying and valuation',
-    'Property development services',
-    'Property management services',
-    'Real estate services',
-    'Rental and leasing activities',
-    'Rental services',
-  ],
-  professional: [
-    'Activities of head offices, management consultancy activities',
-    'Advertisement',
-    'Advertising and marketing research',
-    'Aeronautic engineering / consultancy',
-    'Agricultural engineering',
-    'Arbitration / mediation services',
-    'Chemical engineering services',
-    'Engineering services',
-    'Feasibility studies',
-    'Geosciences services',
-    'Guidance and counselling services',
-    'Human resources management and development services',
-    'Laboratory services',
-    'Legal and accounting activities',
-    'Legal practice and consultancy',
-    'Legislative consultancy',
-    'Management consultancy services',
-    'Marketing services',
-    'Other professional, scientific and technical activities',
-    'Project management services',
-    'Public relation services',
-    'Publication of law reports and journals',
-    'Publishing activities',
-    'Quantity surveying',
-    'Scientific research and development',
-    'Stress management services',
-    'Student admission placement services',
-    'Teachers recruitment',
-    'Technical services',
-  ],
-  admin: [
-    'Accounting and general goods delivery and merchandise movers',
-    'Activities of extraterritorial organizations and bodies',
-    'Activities of households as employers of domestic personnel',
-    'Auctioneering services',
-    'Business support / development services',
-    'Cleaning / waste disposal services',
-    'Company liquidation services',
-    'Company secretarial services',
-    'Domestic support services',
-    'Employment activities',
-    'Employment agency',
-    'Errand and home delivery services',
-    'Fire and safety services',
-    'Fumigation and pest control services',
-    'Gambling and betting activities',
-    'Industrial and safety equipment services',
-    'Industrial chemical services',
-    'Industrial cleaning services',
-    'Industrial safety services',
-    'Office administrative, office support and other business support services',
-    'Organizing conferences',
-    'Organizing seminars / symposiums',
-    'Public administration and defense; compulsory social security',
-    'Remediation activities and other waste management services',
-    'Safety equipment services',
-    'Security and investigation activities',
-    'Supply of unskilled labor',
-    'Waste collection, treatment and disposal activities: material recovery',
-  ],
-  education: [
-    'Apprenticeship and training services',
-    'Curriculum planning / development',
-    'Driving school services',
-    'Education',
-    'Educational services and consultancy',
-    'Libraries, archives, museums and other cultural activities',
-    'Library services',
-    'Montessori supplies',
-    'Montessori training',
-    'Operate bible college',
-    'Operate computer training school',
-    'Operate Islamic school',
-    'Operate nursery and primary school',
-    'Organize dance class services',
-    'Vocational education and training services',
-  ],
-  health: [
-    'Ambulance services',
-    'Beauty and salon services',
-    'Beauty pageants',
-    'Chemist / nursing home',
-    'Community health center',
-    'Dental practices and services',
-    'Gymnasium services',
-    'Human health activities',
-    'Makeup and makeover services',
-    'Medical laboratory services',
-    'Medical practice and consultancy',
-    'Midwifery services',
-    'Mortuary and funeral services',
-    'Operate community health care center',
-    'Operate crece and day care',
-    'Operate hospital / clinic',
-    'Operate maternity clinic',
-    'Optical services',
-    'Patent / medicine services',
-    'Pedicure and manicure services',
-    'Pharmaceutical services',
-    'Physiotherapy services',
-    'Radiography and general body language services',
-    'Residential care activities',
-    'Social work activities without accommodation',
-    'Traditional medicine',
-  ],
-  arts: [
-    'Art galleries, museums and monuments services',
-    'Artiste management and services',
-    'Arts, crafts and designing',
-    'Beauty pageants',
-    'Cinematography / theaters services',
-    'Creative, art and entertainment activities',
-    'Entertainment services',
-    'Fashion designing / tailoring services',
-    'Film production services',
-    'Graphic designing',
-    'Modeling services',
-    'Music production',
-    'Photography services',
-  ],
-  personal: [
-    'Activities of membership organizations',
-    'Cobbler services',
-    'Community based association',
-    'Cultural based association',
-    'Dry cleaning and laundry services',
-    'Foundation based association',
-    'Hat making services',
-    'Laundry and dry cleaning service',
-    'Laundry services',
-    'Leather works / tannery services',
-    'Not specified',
-    'Other personal services activities',
-    'Perfumery services',
-    'Public convenience services',
-    'Social clubs based association',
-    'Sporting based association',
-    'Unspecified',
-  ],
-  ngo_rel: [
-    'Activities of membership organizations',
-    'Church',
-    'Churches',
-    'Community based association',
-    'Cultural based association',
-    'Foundation based association',
-    'Mosque',
-    'Mosques',
-    'Social clubs based association',
-    'Sporting based association',
-  ],
-  oilgas: [
-    'Extraction of crude petroleum and natural gas',
-    'Lubricant / oil services',
-    'Manufacture of coke and refined petroleum products',
-    'Oil and gas services',
-    'Production and distribution of renewable energy',
-    'Sale of petroleum products',
-    'Sale / distribution of petroleum products',
-    'Solar energy',
-    'Supply, sales and services of solar equipment and inverters',
-  ],
+  agriculture:['Abattoir and meat selling services','Animal husbandry services','Aquarium services','Aviary services','Borehole drilling and water works','Crop and animal production, hunting and related services activities','Environmental and landscaping services','Farming','Fish farming / aquaculture','Fishing and aquaculture','Forestry and logging','Gardening and horticultural services','Honey processing','Kennel services','Livestock feeds production and distribution','Livestock management services','Nursery and seedling production','Piggery services','Poultry services','Rabbit farming','Sale of agricultural produce','Sale of agricultural tools, machines and allied products','Sale of animals','Sale of veterinary equipment and drugs','Sawmilling services','Snail farming','Veterinary activities','Veterinary services'],
+  mining:['Extraction of crude petroleum and natural gas','Geosciences services','Mining and grinding services','Mining of coal and lignite','Mining of metal ores','Mining of solid minerals','Mining support services activities','Oil and gas exploration services','Oil and gas services','Other mining and quarrying','Quarry operations'],
+  manufacturing:['Aluminum manufacturing, works, sales and fittings','Bakery and confectionery services','Block industry','Brewery and distillery services','Candle manufacturing and sales','Ceramics and tiles production and sales','Food production and processing services','Fruits / fruit juice production and sales','Gold smiting and jewellery manufacturing','Manufacture of basic metals','Manufacture of basic pharmaceutical products and pharmaceutical preparations','Manufacture of beverages','Manufacture of chemicals and chemical products','Manufacture of coke and refined petroleum products','Manufacture of computer, electronic and optical products','Manufacture of electrical equipment','Manufacture of fabricated metal products, except machinery and equipment','Manufacture of food products','Manufacture of furniture','Manufacture of leather and related products','Manufacture of motor vehicles, trailers and semi-trailers','Manufacture of other transport equipment','Manufacture of paper and paper products','Manufacture of rubber and plastic products','Manufacture of textiles','Manufacture of tobacco products','Manufacture of wearing apparel','Manufacture of wood and products of wood and cork, except furniture','Manufacturing of plastic products','Metal works and fabrication','Milling and grinding services','Other manufacturing','Printing and reproduction of recorded media','Printing press and publishing','Production and sale of bottled and packaged water','Production and sale of cooking / edible oil','Production and sale of polythene bags','Production and sale of tiles and ceramic products','Production and sales of footwear','Production, supply, sale and installation of electrical and electronic equipment','Recycling services','Soap and detergent manufacturing','Textile and garment manufacturing','Upholstery and furniture making','Welding and fabrication services'],
+  utilities:['Electricity, gas, steam and air conditioning supply','Energy production and distribution','Hydro-electrical works','Production and distribution of renewable energy','Sewerage and waste water services','Solar energy installation and maintenance','Supply, sales and services of solar equipment and inverters','Water collection, treatment and supply','Waterproofing services'],
+  construction:['Architectural practice and consultancy','Bricklaying / masonry services','Building construction and civil works','Carpentry and upholstery services','Civil engineering services','Construction of buildings','Construction plant and equipment management','Electrical engineering and installation services','Electrical wiring and fitting services','Estate and facility management','General building and construction','Glass and aluminium works','Interior and exterior decoration services','Iron and steel fabrication works','Mechanical and plumbing works','Painting and decoration services','Plumbing and sanitary services','Property development services','Property management services','Quantity surveying services','Repair and installation of machinery and equipment','Roofing and waterproofing services','Sand, gravel and block supply','Specialized construction activities','Supply of building hardware and materials','Tiling and flooring services','Town planning and land survey services'],
+  trade:['Boutique and fashion retail','Commission agency and brokerage','Dealership in automobile spare parts','Dealership in beverages, drinks and wines','Dealership in general goods','Dealership in jewelry and accessories','E-commerce and online retailing','Export of agricultural and allied products','Frozen foods storage and distribution','General contract and supplies','General merchandise and trading','Hardware and building materials supply','Import and export of general goods','Manufacturers representation and distribution','Medical and pharmaceutical supplies and distribution','Operate confectionary shop','Operate departmental store / supermarket','Operate fast food outlet','Petrol station (retail petroleum products)','Retail trade, except motor vehicle and motorcycles','Sale and distribution of cooking gas (LPG)','Sale and distribution of textile materials','Sale of cameras, projectors and photography accessories','Sale of computer, laptops, printers and accessories','Sale of dairy and food products','Sale of engineering equipment and machinery','Sale of fire and safety equipment','Sale of groceries and household goods','Sale of lubricants and engine oil','Sale of mobile phones and telecommunications accessories','Sale of motor vehicles, motorcycles and automobile products','Sale of petroleum products','Sale of pharmaceuticals and cosmetics','Sale of SIM cards and recharge cards','Sale of solar panels and renewable energy products','Sale of sport equipment and merchandise','Sales of books and stationeries','Tyre sales and distribution','Wholesale and retail trade, motor vehicles and motorcycles','Wholesale trade, except motor vehicles and motorcycles'],
+  transport:['Air transport and aviation services','Automobile / mechanical and repairs services','Automobile towing services','Boat and canoe transportation','Car hire and taxi services','Car wash services','Clearing and forwarding services','Crane and heavy equipment hire','Freight and logistics services','Fuel tanker and haulage services','Land transport and transport via pipelines','Motorcycle (okada) transportation services','Motorcycle spare parts and repairs','Panel beating / car spraying services','Postal and courier activities','Railway and tram services','Refrigerated and cold chain logistics','Repair and maintenance of vehicles','Road passenger transportation services','Sea and waterway transport','Truck and heavy-duty haulage services','Vehicle tyre sales and vulcanizing services','Warehouse and storage services','Water transport and boat services','Wheel balancing and alignment services'],
+  hospitality:['Bar and nightclub services','Catering and food services','Cold room and refrigeration hire','Event decoration services','Event planning and management','Hotel and accommodation services','Hotel reservation and travel services','Night club and lounge operations','Operate canteen and restaurant','Operate fast food outlet','Operate guesthouse / lodge','Operate viewing center','Parks and amusement center','Recreational and leisure services','Restaurant and bar services','Spa and wellness services','Sport and recreation center operations','Travel agency and tour operator'],
+  ict:['App development and mobile software services','Bulk SMS and mass messaging services','Computer hardware repairs and maintenance','Computer programming and consultancy','Cybercafe and business center services','Data analytics and business intelligence services','Digital marketing and social media management','Film and video production services','Graphic design and creative services','ICT consulting and advisory services','ICT training and capacity development','Information and communication services','Installation of CCTV and surveillance systems','Internet service provision','IT infrastructure and network services','Motion picture, video and television program production','Music production and sound engineering','Photography and videography services','Programming and broadcasting activities','Radio and television services','Repair of computers and electronic devices','Software development and deployment','Software development, web design and intranet development','Telecommunications services','Website design and management'],
+  finance:['Accounting and auditing services','Accounting, auditing, taxation and financial management consultancy','Activities auxiliary to financial services and insurance','Banking and financial services','Bureau de change services','Capital market and investment services','Financial advisory and consultancy','Financial services activities, except insurance and pension funding','Forensic accounting services','Fund management services','Insurance agency and brokerage','Insurance, reinsurance and pension funding','Microfinance and cooperative services','Mortgage and real estate finance','Private equity and venture capital','Tax consultancy and advisory','Thrift and cooperative society management'],
+  realestate:['Estate agency and brokerage','Estate surveying and valuation','Facility management services','Property development and construction','Property management and leasing','Real estate investment and advisory','Real estate services (general)','Rental and leasing of equipment','Rental and leasing of property'],
+  professional:['Advertising and marketing services','Agricultural engineering consultancy','Arbitration and mediation services','Architectural consultancy','Chemical engineering consultancy','Civil and structural engineering consultancy','Company secretarial and corporate governance services','Environmental consultancy','Feasibility study and research services','Forensic and investigative services','Geosciences and geological consultancy','Human resources management and development','Laboratory testing and analytical services','Legal practice and consultancy','Legislative and regulatory consultancy','Management consultancy','Marketing research and strategy','Media and communications consultancy','Other professional, scientific and technical activities','Project management services','Publication of legal reports and journals','Publishing activities','Public relations services','Quality assurance and inspection services','Quantity surveying consultancy','Scientific research and development','Stress management and psychological services','Student admission and placement services','Teacher recruitment and placement','Technical and engineering services'],
+  admin:['Auctioneering services','Business support and development services','Cleaning and janitorial services','Company liquidation and dissolution services','Company secretarial and compliance services','Document management and archiving','Domestic support and household services','Employment agency services','Errand and home delivery services','Fire prevention and safety services','Fumigation and pest control services','Industrial and safety equipment supply','Industrial cleaning services','Office administrative and support services','Organizing conferences, seminars and symposiums','Remediation and environmental cleanup services','Security and investigation services','Supply of casual and unskilled labour','Waste collection, treatment and disposal'],
+  education:['Apprenticeship and vocational training','Computer and ICT training center','Curriculum planning and educational consultancy','Driving school services','Educational services and consultancy','Examination coaching and tutorial services','Language and communication training','Libraries, archives and museums','Montessori school supplies and training','Nursery and primary school operation','Online learning platform services','Operate bible college','Operate Islamic school','Operate secondary school / college','Operate university / tertiary institution','Organize music, art and dance classes','Vocational and skills training services'],
+  health:['Ambulance and emergency medical services','Blood bank and plasma services','Beauty and salon services','Chemist / patent medicine store','Community health center operations','Dental clinic and practices','Dietitian and nutrition services','Fitness, gymnasium and sports center','Herbal and traditional medicine','Homeopathy and alternative health services','Hospital / clinic operations','Laboratory and diagnostic services','Makeup, beauty and spa services','Maternity clinic and midwifery services','Mental health and counselling services','Mortuary and funeral services','Nursing home and residential care','Optical and optometry services','Pedicure and manicure services','Pharmaceutical distribution and sales','Physiotherapy and rehabilitation services','Radiography and medical imaging services','Social work and community welfare','Veterinary clinic and pet care'],
+  arts:['Animation and motion graphics services','Art galleries, exhibitions and museums','Artiste management and promotion','Arts, crafts and designing','Beauty pageants and modeling','Cinematography and film production','Creative writing and content creation','Entertainment and events services','Fashion designing and tailoring','Film and music production','Graphic design and visual arts','Modeling and talent management','Music performance and entertainment','Photography and videography','Podcast and media content creation','Print and digital media publishing','Radio and television broadcasting'],
+  personal:['Barbing and hairdressing services','Cobbler and shoe repair services','Community and social club operations','Dry cleaning and laundry services','Hat making and millinery services','Laundry and linen services','Leather works and tannery services','Other personal service activities','Perfumery and cosmetics retail','Public convenience and hygiene services','Social and recreational club operations','Tailoring and dress making','Unspecified personal services'],
+  ngo_rel:['Alumni association','Charitable foundation','Church and religious organization','Civil society organization','Community development association','Cultural and heritage organization','Empowerment and skills foundation','Environmental advocacy and conservation','Human rights organization','Islamic organization / mosque','NGO and charity operations','Old students association','Professional association and body','Senior citizens association','Social welfare organization','Sports association and club','Trade union and workers association','Women and gender advocacy','Youth development organization'],
+  oilgas:['Crude oil exploration and production','Gas distribution and downstream services','Lubricant and engine oil supply','Manufacture of coke and refined petroleum products','Oil and gas engineering services','Oil field services and equipment supply','Petroleum products distribution and sales','Petroleum trading and brokerage','Pipeline construction and maintenance','Production and distribution of renewable energy','Solar energy and off-grid power solutions','Supply, sales and services of solar equipment and inverters'],
+  maritime:['Boat building and repair','Dredging and marine construction','Fishing vessel operations','Marine engineering services','Marine logistics and freight','Port and terminal operations','Ship chandelling services','Shipping agency and brokerage'],
+  aviation:['Aircraft maintenance and engineering','Air charter services','Airline catering services','Aviation fuel supply','Aviation training and consultancy','Ground handling services','Travel agency and air ticketing'],
+  media:['Advertising and media buying','Book publishing','Digital content creation and distribution','Magazine and newspaper publishing','Music and entertainment distribution','Out-of-home advertising','Radio broadcasting','Television broadcasting','Video and audio streaming services'],
 };
 
-// Map prefix → principal select id, specific select id, wrap id
 const NATURE_IDS = {
-  bn:     { principal: 'bnPrincipal',     specific: 'bnSpecific',     wrap: 'bnSpecificWrap' },
-  llc:    { principal: 'llcPrincipal',    specific: 'llcSpecific',    wrap: 'llcSpecificWrap' },
-  part:   { principal: 'partPrincipal',   specific: 'partSpecific',   wrap: 'partSpecificWrap' },
-  search: { principal: 'searchPrincipal', specific: 'searchSpecific', wrap: 'searchSpecificWrap' },
+  bn:     { principal:'bnPrincipal',     specific:'bnSpecific',     wrap:'bnSpecificWrap' },
+  llc:    { principal:'llcPrincipal',    specific:'llcSpecific',    wrap:'llcSpecificWrap' },
+  part:   { principal:'partPrincipal',   specific:'partSpecific',   wrap:'partSpecificWrap' },
+  search: { principal:'searchPrincipal', specific:'searchSpecific', wrap:'searchSpecificWrap' },
 };
 
 window.updateSpecific = function(prefix) {
@@ -1360,110 +1084,332 @@ window.updateSpecific = function(prefix) {
   const principal = document.getElementById(ids.principal).value;
   const specificEl = document.getElementById(ids.specific);
   const wrapEl = document.getElementById(ids.wrap);
-
   if (!principal || !CAC_BUSINESS_MAP[principal]) {
     wrapEl.classList.remove('visible');
     specificEl.innerHTML = '<option value="">— Select specific activity —</option>';
     return;
   }
-
   const options = CAC_BUSINESS_MAP[principal];
   specificEl.innerHTML = '<option value="">— Select specific activity —</option>' +
     options.map(o => `<option value="${o}">${o}</option>`).join('');
   wrapEl.classList.add('visible');
 };
 
-// ── HELPERS ─────────────────────────────────
-const v  = id => { const el = document.getElementById(id); return (el && el.value && el.value.trim()) ? el.value.trim() : '—'; };
-const fmtDOB = r => { if (!r || r==='—') return '—'; const p=r.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; };
-const show = id => { const el=document.getElementById(id); if(el) el.classList.add('show'); };
-const hide = id => { const el=document.getElementById(id); if(el) el.classList.remove('show'); };
-const allDyn = () => document.querySelectorAll('.dyn-section').forEach(el => el.classList.remove('show'));
+// ══ DYNAMIC DIRECTORS ══
+let directorCount = 2;
+let partnerCount = 2;
+let trusteeCount = 2;
 
-// Helper to get the combined nature of business string for a registration type
-function getNatureStr(prefix) {
-  const ids = NATURE_IDS[prefix];
-  if (!ids) return '—';
-  const principal = document.getElementById(ids.principal)?.value || '';
-  const specific  = document.getElementById(ids.specific)?.value  || '';
-  const principalLabel = document.getElementById(ids.principal)?.options[document.getElementById(ids.principal)?.selectedIndex]?.text || '';
-  if (!principal) return '—';
-  return specific ? specific : principalLabel;
+// ── CHANGE 1: PSC added to role options ──
+function directorBlockHTML(n, canRemove) {
+  const removeBtn = canRemove ? `<button type="button" class="btn-remove-person" onclick="removeDirector(${n})">✕ Remove</button>` : '';
+  return `<div class="person-block new" id="dirBlock_${n}">
+    <div class="person-block-title"><span id="dirBlockLabel_${n}">Person ${n}</span>${removeBtn}</div>
+    <div class="fg">
+      <label>Role in Company *</label>
+      <select id="dir${n}Role" onchange="updateDirLabel(${n})">
+        <option value="">— Select role —</option>
+        <option value="Director &amp; Shareholder">Director &amp; Shareholder</option>
+        <option value="Director, Shareholder &amp; Secretary">Director, Shareholder &amp; Secretary</option>
+        <option value="Director only">Director only</option>
+        <option value="Shareholder only">Shareholder only</option>
+        <option value="Company Secretary only">Company Secretary only</option>
+      </select>
+      <div class="fgh">Select the primary role this person holds in the company</div>
+    </div>
+    <div class="fg" style="background:rgba(201,151,42,.06);border:1px solid rgba(201,151,42,.3);border-left:3px solid var(--gold);padding:.85rem 1rem;margin-bottom:1.15rem">
+      <label style="color:var(--gd);font-size:.72rem;letter-spacing:.07em;font-weight:700;text-transform:uppercase;display:block;margin-bottom:.5rem">PSC — Person with Significant Control *</label>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <label style="display:flex;align-items:center;gap:.4rem;font-size:.84rem;color:var(--g6);text-transform:none;letter-spacing:0;font-weight:400;cursor:pointer">
+          <input type="radio" name="dir${n}PSC" id="dir${n}PSCyes" value="Yes — PSC" onchange="updateDirLabel(${n})" style="width:auto;accent-color:var(--gb)"> Yes — this person is a PSC
+        </label>
+        <label style="display:flex;align-items:center;gap:.4rem;font-size:.84rem;color:var(--g6);text-transform:none;letter-spacing:0;font-weight:400;cursor:pointer">
+          <input type="radio" name="dir${n}PSC" id="dir${n}PSCno" value="Not a PSC" onchange="updateDirLabel(${n})" style="width:auto;accent-color:var(--gb)"> No — not a PSC
+        </label>
+      </div>
+      <div style="font-size:.72rem;color:var(--g6);margin-top:.45rem;font-weight:300">Required by CAC under CAMA 2020. A PSC holds 25%+ shares or voting rights, or exercises significant control over the company.</div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Full Legal Name *</label><input type="text" id="dir${n}Name" oninput="updateDirLabel(${n})" placeholder="Exactly as on ID"></div>
+      <div class="fg"><label>Date of Birth *</label><input type="date" id="dir${n}DOB"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Gender *</label><select id="dir${n}Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div>
+      <div class="fg"><label>Occupation *</label><input type="text" id="dir${n}Occ" placeholder="e.g. Businessman, Engineer"></div>
+    </div>
+    <div class="fg"><label>Residential Address *</label><input type="text" id="dir${n}Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+    <div class="fgr">
+      <div class="fg"><label>Phone *</label><input type="tel" id="dir${n}Phone" placeholder="08012345678"></div>
+      <div class="fg"><label>Email *</label><input type="email" id="dir${n}Email" placeholder="person@email.com"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Means of ID *</label>
+        <select id="dir${n}IDType" onchange="toggleNIN(${n})">
+          <option value="">— Select —</option>
+          <option value="NIN">National ID / NIN (Nigerians)</option>
+          <option value="Passport">International Passport (foreigners)</option>
+          <option value="Driver's Licence">Driver's Licence</option>
+          <option value="Voter's Card">Permanent Voter's Card</option>
+        </select>
+      </div>
+      <div class="fg"><label>NIN / ID Number *</label>
+        <input type="text" id="dir${n}NIN" placeholder="11-digit NIN or Passport number">
+        <div class="fgh" id="dir${n}NINHint">Nigerians: NIN is your ID number</div>
+      </div>
+    </div>
+    <div class="fgr" id="dir${n}SharesRow">
+      <div class="fg"><label>Shares Allocated *</label><input type="text" id="dir${n}Shares" placeholder="e.g. 50,000 units"></div>
+      <div class="fg"><label>Ownership % *</label><input type="text" id="dir${n}Pct" placeholder="e.g. 50%"><div class="fgh">All shareholders must total 100%</div></div>
+    </div>
+  </div>`;
 }
 
-// ── TYPE CONFIG ──────────────────────────────
+// ── CHANGE 2: No signature field in partner blocks ──
+function partnerBlockHTML(n, canRemove) {
+  const removeBtn = canRemove ? `<button type="button" class="btn-remove-person" onclick="removePartner(${n})">✕ Remove</button>` : '';
+  return `<div class="person-block new" id="partnerBlock_${n}">
+    <div class="person-block-title"><span>Partner ${n}</span>${removeBtn}</div>
+    <div class="fgr">
+      <div class="fg"><label>Full Legal Name *</label><input type="text" id="part${n}Name" placeholder="Exactly as on ID"></div>
+      <div class="fg"><label>Date of Birth *</label><input type="date" id="part${n}DOB"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Gender *</label><select id="part${n}Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div>
+      <div class="fg"><label>Occupation *</label><input type="text" id="part${n}Occ" placeholder="Occupation / profession"></div>
+    </div>
+    <div class="fg"><label>Residential Address *</label><input type="text" id="part${n}Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+    <div class="fgr">
+      <div class="fg"><label>Phone *</label><input type="tel" id="part${n}Phone" placeholder="08012345678"></div>
+      <div class="fg"><label>Email *</label><input type="email" id="part${n}Email" placeholder="partner@email.com"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Means of ID *</label>
+        <select id="part${n}IDType" onchange="const inp=document.getElementById('part${n}IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+          <option value="">— Select —</option>
+          <option value="NIN">National ID / NIN (Nigerians)</option>
+          <option value="Passport">International Passport (foreigners)</option>
+          <option value="Driver's Licence">Driver's Licence</option>
+          <option value="Voter's Card">Permanent Voter's Card</option>
+        </select>
+      </div>
+      <div class="fg"><label>NIN / ID Number *</label><input type="text" id="part${n}IDNum" placeholder="11-digit NIN or Passport number"></div>
+    </div>
+    <div class="fg"><label>Profit/Loss Share % *</label><input type="text" id="part${n}Share" placeholder="e.g. 50%"><div class="fgh">All partners must total 100%</div></div>
+  </div>`;
+}
+
+// ── CHANGE 2: No signature field in trustee blocks ──
+function trusteeBlockHTML(n, canRemove) {
+  const removeBtn = canRemove ? `<button type="button" class="btn-remove-person" onclick="removeTrustee(${n})">✕ Remove</button>` : '';
+  return `<div class="person-block new" id="trusteeBlock_${n}">
+    <div class="person-block-title"><span>Trustee ${n}${n===1?' (Lead Trustee)':''}</span>${removeBtn}</div>
+    <div class="fgr">
+      <div class="fg"><label>Full Legal Name *</label><input type="text" id="trustee${n}Name" placeholder="Exactly as on ID"></div>
+      <div class="fg"><label>Date of Birth *</label><input type="date" id="trustee${n}DOB"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Gender *</label><select id="trustee${n}Gender"><option value="">Select...</option><option>Male</option><option>Female</option></select></div>
+      <div class="fg"><label>Occupation *</label><input type="text" id="trustee${n}Occ" placeholder="e.g. Engineer, Pastor, Teacher"></div>
+    </div>
+    <div class="fg"><label>Residential Address *</label><input type="text" id="trustee${n}Address" placeholder="Street, area, LGA, State — no P.O. Box"></div>
+    <div class="fgr">
+      <div class="fg"><label>Phone *</label><input type="tel" id="trustee${n}Phone" placeholder="08012345678"></div>
+      <div class="fg"><label>Email *</label><input type="email" id="trustee${n}Email" placeholder="trustee@email.com"></div>
+    </div>
+    <div class="fgr">
+      <div class="fg"><label>Means of ID *</label>
+        <select id="trustee${n}IDType" onchange="const inp=document.getElementById('trustee${n}IDNum');inp.placeholder=this.value==='Passport'?'Passport number':'11-digit NIN';">
+          <option value="">— Select —</option>
+          <option value="NIN">National ID / NIN (Nigerians)</option>
+          <option value="Passport">International Passport (foreigners)</option>
+          <option value="Driver's Licence">Driver's Licence</option>
+          <option value="Voter's Card">Permanent Voter's Card</option>
+        </select>
+      </div>
+      <div class="fg"><label>NIN / ID Number *</label><input type="text" id="trustee${n}IDNum" placeholder="11-digit NIN or Passport number"></div>
+    </div>
+  </div>`;
+}
+
+function initDirectors() {
+  directorCount = 2;
+  const wrap = document.getElementById('llcDirectorsWrap');
+  wrap.innerHTML = directorBlockHTML(1, false) + directorBlockHTML(2, false);
+  updateDirLabel(1); updateDirLabel(2);
+  updateDirBadge();
+}
+
+window.updateDirLabel = function(n) {
+  const role = document.getElementById('dir'+n+'Role')?.value || '';
+  const name = document.getElementById('dir'+n+'Name')?.value?.trim() || '';
+  const pscYes = document.getElementById('dir'+n+'PSCyes')?.checked;
+  const label = document.getElementById('dirBlockLabel_'+n);
+  if (label) {
+    const displayName = name ? name.split(' ')[0] : `Person ${n}`;
+    const pscTag = pscYes ? ' [PSC]' : '';
+    label.textContent = role ? `${displayName} — ${role}${pscTag}` : `Person ${n}`;
+  }
+};
+
+window.toggleNIN = function(n) {
+  const idType = document.getElementById('dir'+n+'IDType')?.value || '';
+  const input = document.getElementById('dir'+n+'NIN');
+  const hint = document.getElementById('dir'+n+'NINHint');
+  if (!input) return;
+  if (idType === 'NIN' || idType === "Driver's Licence" || idType === "Voter's Card") {
+    input.placeholder = '11-digit NIN e.g. 12345678901';
+    if (hint) hint.textContent = 'Your NIN is your ID number — it\'s what CAC uses for Nigerian citizens';
+  } else if (idType === 'Passport') {
+    input.placeholder = 'Passport number e.g. A12345678';
+    if (hint) hint.textContent = 'For foreign nationals — enter your international passport number';
+  }
+};
+
+window.addDirector = function() {
+  directorCount++;
+  const wrap = document.getElementById('llcDirectorsWrap');
+  wrap.insertAdjacentHTML('beforeend', directorBlockHTML(directorCount, true));
+  updateDirLabel(directorCount);
+  updateDirBadge();
+  document.getElementById('dirBlock_' + directorCount).scrollIntoView({ behavior:'smooth', block:'nearest' });
+};
+window.removeDirector = function(n) {
+  if (directorCount <= 2) { alert('An LLC must have at least 2 directors.'); return; }
+  const el = document.getElementById('dirBlock_' + n);
+  if (el) el.remove();
+  directorCount--;
+  updateDirBadge();
+};
+function updateDirBadge() {
+  const b = document.getElementById('dirCountBadge');
+  if (b) b.textContent = directorCount + ' person' + (directorCount !== 1 ? 's' : '') + ' added';
+}
+
+window.addPartner = function() {
+  partnerCount++;
+  const wrap = document.getElementById('partnerBlocksWrap');
+  wrap.insertAdjacentHTML('beforeend', partnerBlockHTML(partnerCount, true));
+  updatePartnerBadge();
+  document.getElementById('partnerBlock_' + partnerCount).scrollIntoView({ behavior:'smooth', block:'nearest' });
+};
+window.removePartner = function(n) {
+  if (partnerCount <= 2) { alert('A partnership must have at least 2 partners.'); return; }
+  const el = document.getElementById('partnerBlock_' + n);
+  if (el) el.remove();
+  partnerCount--;
+  updatePartnerBadge();
+};
+function updatePartnerBadge() {
+  const b = document.getElementById('partnerCountBadge');
+  if (b) b.textContent = partnerCount + ' partner' + (partnerCount !== 1 ? 's' : '');
+}
+
+window.addTrustee = function() {
+  trusteeCount++;
+  const wrap = document.getElementById('trusteeBlocksWrap');
+  wrap.insertAdjacentHTML('beforeend', trusteeBlockHTML(trusteeCount, true));
+  updateTrusteeBadge();
+  document.getElementById('trusteeBlock_' + trusteeCount).scrollIntoView({ behavior:'smooth', block:'nearest' });
+};
+window.removeTrustee = function(n) {
+  if (trusteeCount <= 2) { alert('Incorporated Trustees must have at least 2 trustees.'); return; }
+  const el = document.getElementById('trusteeBlock_' + n);
+  if (el) el.remove();
+  trusteeCount--;
+  updateTrusteeBadge();
+};
+function updateTrusteeBadge() {
+  const b = document.getElementById('trusteeCountBadge');
+  if (b) b.textContent = trusteeCount + ' trustee' + (trusteeCount !== 1 ? 's' : '');
+}
+
+// ── HELPERS ──
+const v = id => { const el=document.getElementById(id); return (el&&el.value&&el.value.trim())?el.value.trim():'—'; };
+const fmtDOB = r => { if(!r||r==='—')return '—'; const p=r.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; };
+const show = id => { const el=document.getElementById(id); if(el) el.classList.add('show'); };
+const allDyn = () => document.querySelectorAll('.dyn-section').forEach(el => el.classList.remove('show'));
+
 const typeConfig = {
   bn: {
-    label: 'Business Name Registration',
-    hint: 'Sole Proprietorship — for individual entrepreneurs',
-    bizSections: ['sec-bn-biz'],
-    applicantSections: ['sec-bn-applicant'],
-    docs: [
-      'Valid government-issued photo ID (NIN / Passport / Driver\'s Licence / Voter\'s Card)',
-      'Passport photograph — white background, recent',
-      'Proof of address (utility bill not older than 3 months)',
-      'Signature specimen on white paper'
+    label:'Business Name Registration',
+    hint:'Sole Proprietorship — for individual entrepreneurs',
+    bizSections:['sec-bn-biz'],
+    applicantSections:['sec-bn-applicant'],
+    docs:[
+      'Passport photograph — white background, recent (within 6 months)',
+      'Valid government-issued photo ID — NIN slip, International Passport, Driver\'s Licence, or Voter\'s Card',
+      'Proof of address — utility bill or bank statement not older than 3 months',
+      'NIN (National Identification Number) — your 11-digit NIN',
+      'Signature specimen — sign your full name clearly on a plain white paper and send a clear photo (no shadows, no blur)'
     ]
   },
   llc: {
-    label: 'Limited Liability Company (LLC)',
-    hint: 'For companies — requires minimum 2 directors',
-    bizSections: ['sec-llc-biz'],
-    applicantSections: ['sec-other-applicant'],
-    docs: [
-      'Valid photo ID for ALL directors (NIN / Passport / Driver\'s Licence)',
-      'Passport photograph for each director — white background',
-      'Proof of address for each director (utility bill, max 3 months old)',
-      'Memorandum & Articles of Association (we can prepare this)',
-      'Statement of share capital and shareholding details'
+    label:'Limited Liability Company (LLC)',
+    hint:'For companies — requires minimum 2 directors',
+    bizSections:['sec-llc-biz'],
+    applicantSections:['sec-other-applicant'],
+    docs:[
+      'Passport photograph for EACH director/shareholder — white background, recent',
+      'Valid photo ID for EACH director/shareholder — NIN slip, Passport, Driver\'s Licence, or Voter\'s Card',
+      'Proof of address for EACH person — utility bill or bank statement (max 3 months old)',
+      'Signature specimen for EACH director/shareholder — sign clearly on plain white paper, send a clear photo',
+      'Memorandum & Articles of Association — DANNIT can prepare this for you',
+      'Share capital structure — total shares and how they are distributed among shareholders'
     ]
   },
   partnership: {
-    label: 'Partnership Registration',
-    hint: 'For 2 or more individuals in business together',
-    bizSections: ['sec-partnership-biz'],
-    applicantSections: ['sec-other-applicant'],
-    docs: [
-      'Valid photo ID for ALL partners (NIN / Passport / Driver\'s Licence / Voter\'s Card)',
-      'Passport photograph for each partner — white background',
-      'Proof of address for each partner (utility bill, max 3 months old)',
-      'Signed partnership agreement / deed (optional but recommended)'
+    label:'Partnership Registration',
+    hint:'For 2 or more individuals in business together',
+    bizSections:['sec-partnership-biz'],
+    applicantSections:['sec-other-applicant'],
+    docs:[
+      'Passport photograph for EACH partner — white background, recent',
+      'Valid photo ID for EACH partner — NIN slip, Passport, Driver\'s Licence, or Voter\'s Card',
+      'Proof of address for EACH partner — utility bill or bank statement (max 3 months old)',
+      'Signature specimen for EACH partner — sign clearly on plain white paper, send a clear photo',
+      'Partnership deed / agreement — DANNIT can assist in preparing this'
     ]
   },
   ngo: {
-    label: 'Incorporated Trustees (NGO / Church / Association)',
-    hint: 'For non-profits, religious bodies & associations',
-    bizSections: ['sec-ngo-biz'],
-    applicantSections: ['sec-other-applicant'],
-    docs: [
-      'Valid photo ID for ALL trustees (minimum 2 trustees required)',
-      'Passport photograph for each trustee — white background',
-      'Draft constitution / rules of the organization',
-      'Minutes of meeting showing election of trustees',
-      'Newspaper publication receipt (CAC requires public notice — we guide you)',
-      'Proof of address for each trustee'
+    label:'Incorporated Trustees (NGO / Church / Association)',
+    hint:'For non-profits, religious bodies & associations',
+    bizSections:['sec-ngo-biz'],
+    applicantSections:['sec-other-applicant'],
+    docs:[
+      'Passport photograph for EACH trustee (minimum 2 trustees required) — white background',
+      'Valid photo ID for EACH trustee — NIN slip, Passport, Driver\'s Licence, or Voter\'s Card',
+      'Proof of address for EACH trustee — utility bill (max 3 months old)',
+      'Signature specimen for EACH trustee — sign clearly on plain white paper, send a clear photo',
+      'Draft constitution / rules of the organization (DANNIT can draft this for you)',
+      'Minutes of meeting showing election/appointment of trustees',
+      'List of founding members with their signatures',
+      'Newspaper publication notice — we will guide you on this (mandatory for NGOs/churches)'
     ]
   },
   compliance: {
-    label: 'Post-Registration Compliance',
-    hint: 'Annual returns, changes, amendments',
-    bizSections: ['sec-compliance-biz'],
-    applicantSections: ['sec-other-applicant'],
-    docs: [
-      'Original or copy of your CAC certificate',
-      'Valid photo ID of the authorized person / director',
-      'Supporting documents relevant to the change requested',
-      'For annual returns: Financial statements (if applicable)'
+    label:'Post-Registration Compliance',
+    hint:'Annual returns, changes, amendments',
+    bizSections:['sec-compliance-biz'],
+    applicantSections:['sec-other-applicant'],
+    docs:[
+      'Original or certified copy of your CAC certificate',
+      'Valid photo ID of the authorized director / proprietor / trustee',
+      'Signature specimen of the authorized person — sign on plain white paper, send a clear photo',
+      'Supporting documents for the specific change requested',
+      'For annual returns: Financial statements or statement of affairs (if applicable)',
+      'For change of directors: New director\'s ID, passport photo, and address proof',
+      'For change of address: New address proof / tenancy agreement'
     ]
   },
   search: {
-    label: 'Business Name Search Only',
-    hint: 'Check availability before committing to registration',
-    bizSections: ['sec-search-biz'],
-    applicantSections: [],
-    docs: [
+    label:'Business Name Search Only',
+    hint:'Check availability before committing to registration',
+    bizSections:['sec-search-biz'],
+    applicantSections:[],
+    docs:[
       'No documents required for name search',
-      'Results are typically ready within a few hours'
+      'Results typically ready within a few hours on business days',
+      'Once your name is confirmed available, we will guide you on next steps'
     ]
   }
 };
@@ -1471,7 +1417,6 @@ const typeConfig = {
 let currentType = '';
 let step = 0;
 
-// ── ON TYPE CHANGE ───────────────────────────
 window.onTypeChange = function(type) {
   currentType = type;
   allDyn();
@@ -1493,6 +1438,11 @@ window.onTypeChange = function(type) {
   document.getElementById('stepTabs').style.display = 'flex';
   document.getElementById('formBody').style.display = 'block';
   document.getElementById('formFooter').style.display = 'flex';
+
+  if (type === 'llc') initDirectors();
+  if (type === 'partnership') { partnerCount = 2; updatePartnerBadge(); }
+  if (type === 'ngo') { trusteeCount = 2; updateTrusteeBadge(); }
+
   step = 0;
   updateUI();
 };
@@ -1500,7 +1450,7 @@ window.onTypeChange = function(type) {
 window.selectTypeAndScroll = function(type) {
   document.getElementById('regType').value = type;
   window.onTypeChange(type);
-  document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('register').scrollIntoView({ behavior:'smooth' });
 };
 
 const stepLabels = ['Step 1 of 3 — Details', 'Step 2 of 3 — Applicant', 'Step 3 of 3 — Confirm & Submit'];
@@ -1526,70 +1476,71 @@ window.changeStep = function(dir) {
 
 document.querySelectorAll('.tbtn').forEach((btn,i) => btn.addEventListener('click', () => { if(i<=step){ step=i; window.updateUI(); } }));
 
-window.renderDirectors = function() {
-  const n = parseInt(document.getElementById('llcNumDirectors').value) || 0;
-  const wrap = document.getElementById('llcDirectorsWrap');
-  wrap.innerHTML = '';
-  for (let i = 1; i <= n; i++) {
-    wrap.innerHTML += `
-      <div class="person-block">
-        <div class="person-block-title">Director ${i}${i===1?' (Managing Director / CEO)':''}</div>
-        <div class="fgr"><div class="fg"><label>Full Name *</label><input type="text" id="dir${i}Name" placeholder="Full legal name"></div><div class="fg"><label>Date of Birth *</label><input type="date" id="dir${i}DOB"></div></div>
-        <div class="fg"><label>Residential Address *</label><input type="text" id="dir${i}Address" placeholder="Home address"></div>
-        <div class="fgr"><div class="fg"><label>Nationality *</label><input type="text" id="dir${i}Nat" value="Nigerian"></div><div class="fg"><label>Occupation *</label><input type="text" id="dir${i}Occ" placeholder="e.g. Businessman, Engineer..."></div></div>
-        <div class="fgr"><div class="fg"><label>Means of ID *</label><select id="dir${i}IDType"><option value="">Select ID...</option><option>National ID (NIN)</option><option>International Passport</option><option>Driver's Licence</option><option>Voter's Card</option></select></div><div class="fg"><label>ID Number *</label><input type="text" id="dir${i}IDNum" placeholder="ID number"></div></div>
-        <div class="fgr"><div class="fg"><label>Shares Held</label><input type="text" id="dir${i}Shares" placeholder="e.g. 50,000 ordinary shares"></div><div class="fg"><label>Phone Number *</label><input type="text" id="dir${i}Phone" placeholder="08012345678"></div></div>
-      </div>`;
-  }
-};
-
 window.buildSummary = function() {
   const cfg = typeConfig[currentType] || {};
   let html = `<b>Registration Type:</b> ${cfg.label || '—'}<br><br>`;
   if (currentType === 'bn') {
-    const nature = getNatureStr('bn');
-    html += `<b>Business Name:</b> ${v('bName1')} &nbsp;|&nbsp; 2nd: ${v('bName2')} &nbsp;|&nbsp; 3rd: ${v('bName3')}<br>
-             <b>Principal Category:</b> ${document.getElementById('bnPrincipal')?.options[document.getElementById('bnPrincipal')?.selectedIndex]?.text || '—'}<br>
+    html += `<b>Business Name:</b> ${v('bName1')} | 2nd: ${v('bName2')} | 3rd: ${v('bName3')}<br>
+             <b>Principal Category:</b> ${document.getElementById('bnPrincipal')?.options[document.getElementById('bnPrincipal')?.selectedIndex]?.text||'—'}<br>
              <b>Specific Activity:</b> ${v('bnSpecific')}<br>
-             <b>Business Address:</b> ${v('bizAddress')}<br><br>
-             <b>Proprietor:</b> ${v('fname')} ${v('lname')}<br>
-             <b>Phone:</b> ${v('phone')} &nbsp;|&nbsp; <b>WhatsApp:</b> ${v('whatsapp')}<br>
-             <b>Email:</b> ${v('email')}<br>
-             <b>DOB:</b> ${fmtDOB(v('dob'))} &nbsp;|&nbsp; <b>Nationality:</b> ${v('nationality')}<br>
+             <b>Business Address:</b> ${v('bizAddress')}, ${v('bnLGA')}, ${v('bnState')}<br>
+             <b>Commencement:</b> ${fmtDOB(v('bnCommenceDate'))}<br><br>
+             <b>Proprietor:</b> ${v('fname')} ${v('lname')} (${v('bnGender')})<br>
+             <b>DOB:</b> ${fmtDOB(v('dob'))} | <b>Nationality:</b> ${v('nationality')} | <b>Occupation:</b> ${v('bnOccupation')}<br>
              <b>ID:</b> ${v('idType')} — ${v('idNum')}<br>
-             <b>Occupation:</b> ${v('bnOccupation')}`;
-  } else if (currentType === 'llc') {
-    const n = parseInt(document.getElementById('llcNumDirectors')?.value) || 0;
-    let dirs = '';
-    for (let i=1;i<=n;i++) dirs += `<br>&nbsp;&nbsp;• Dir ${i}: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | ID: ${v('dir'+i+'IDType')} ${v('dir'+i+'IDNum')}`;
-    html += `<b>Company Name:</b> ${v('llcName1')} &nbsp;|&nbsp; 2nd: ${v('llcName2')}<br>
-             <b>Principal Category:</b> ${document.getElementById('llcPrincipal')?.options[document.getElementById('llcPrincipal')?.selectedIndex]?.text || '—'}<br>
-             <b>Specific Activity:</b> ${v('llcSpecific')}<br>
-             <b>Share Capital:</b> ₦${v('llcShareCapital')} &nbsp;|&nbsp; <b>Secretary:</b> ${v('llcSecretary')}<br>
-             <b>Directors (${n}):</b>${dirs}<br><br>
-             <b>Contact:</b> ${v('fname')} ${v('lname')} — ${v('applicantRole')}<br>
-             <b>Phone:</b> ${v('phone')} &nbsp;|&nbsp; <b>WhatsApp:</b> ${v('whatsapp')}<br>
+             <b>Phone:</b> ${v('phone')} | <b>WhatsApp:</b> ${v('whatsapp')}<br>
              <b>Email:</b> ${v('email')}`;
+  } else if (currentType === 'llc') {
+    let dirsText = '';
+    for (let i=1;i<=directorCount;i++) {
+      const el = document.getElementById('dirBlock_'+i);
+      if (el) dirsText += `<br>&nbsp;&nbsp;• Person ${i} [${v('dir'+i+'Role')}]: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | NIN: ${v('dir'+i+'NIN')} | Shares: ${v('dir'+i+'Shares')} (${v('dir'+i+'Pct')})`;
+    }
+    html += `<b>Company Name:</b> ${v('llcName1')} | 2nd: ${v('llcName2')}<br>
+             <b>Principal Category:</b> ${document.getElementById('llcPrincipal')?.options[document.getElementById('llcPrincipal')?.selectedIndex]?.text||'—'}<br>
+             <b>Specific Activity:</b> ${v('llcSpecific')}<br>
+             <b>Address:</b> ${v('llcAddress')}, ${v('llcLGA')}, ${v('llcState')}<br>
+             <b>Share Capital:</b> ₦${v('llcShareCapital')} | <b>Shares:</b> ${v('llcNumShares')} (${v('llcShareType')})<br>
+             <b>Company Email:</b> ${v('llcEmail')}<br>
+             <b>Persons (${directorCount}):</b>${dirsText}<br><br>
+             <b>Contact:</b> ${v('fname')} ${v('lname')} — ${v('applicantRole')}<br>
+             <b>Phone:</b> ${v('phone')} | <b>WhatsApp:</b> ${v('whatsapp')} | <b>Email:</b> ${v('email')}`;
   } else if (currentType === 'partnership') {
+    let partsText = '';
+    for (let i=1;i<=partnerCount;i++) {
+      const el = document.getElementById('partnerBlock_'+i);
+      if (el) partsText += `<br>&nbsp;&nbsp;• P${i}: ${v('part'+i+'Name')} | DOB: ${fmtDOB(v('part'+i+'DOB'))} | Share: ${v('part'+i+'Share')}`;
+    }
     html += `<b>Partnership Name:</b> ${v('partName1')}<br>
-             <b>Principal Category:</b> ${document.getElementById('partPrincipal')?.options[document.getElementById('partPrincipal')?.selectedIndex]?.text || '—'}<br>
+             <b>Principal Category:</b> ${document.getElementById('partPrincipal')?.options[document.getElementById('partPrincipal')?.selectedIndex]?.text||'—'}<br>
              <b>Specific Activity:</b> ${v('partSpecific')}<br>
-             <b>Partner 1:</b> ${v('part1Name')} | DOB: ${fmtDOB(v('part1DOB'))} | ID: ${v('part1IDType')} ${v('part1IDNum')}<br>
-             <b>Partner 2:</b> ${v('part2Name')} | DOB: ${fmtDOB(v('part2DOB'))} | ID: ${v('part2IDType')} ${v('part2IDNum')}<br><br>
+             <b>Address:</b> ${v('partAddress')}, ${v('partState')}<br>
+             <b>Commencement:</b> ${fmtDOB(v('partCommenceDate'))}<br>
+             <b>Partners (${partnerCount}):</b>${partsText}<br><br>
              <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
   } else if (currentType === 'ngo') {
+    let trusteesText = '';
+    for (let i=1;i<=trusteeCount;i++) {
+      const el = document.getElementById('trusteeBlock_'+i);
+      if (el) trusteesText += `<br>&nbsp;&nbsp;• T${i}: ${v('trustee'+i+'Name')} | ${v('trustee'+i+'Occ')} | ID: ${v('trustee'+i+'IDType')} ${v('trustee'+i+'IDNum')}`;
+    }
     html += `<b>Organization Name:</b> ${v('ngoName1')}<br>
              <b>Type:</b> ${v('ngoType')}<br>
-             <b>Objectives:</b> ${v('ngoObjectives').substring(0,100)}...<br>
-             <b>Established:</b> ${fmtDOB(v('ngoEstDate'))} &nbsp;|&nbsp; <b>Newspaper:</b> ${v('ngoPaper')}<br>
-             <b>Trustee 1:</b> ${v('trustee1Name')} | ${v('trustee1Occ')} | ID: ${v('trustee1IDType')} ${v('trustee1IDNum')}<br>
-             <b>Trustee 2:</b> ${v('trustee2Name')} | ${v('trustee2Occ')} | ID: ${v('trustee2IDType')} ${v('trustee2IDNum')}<br><br>
+             <b>Address:</b> ${v('ngoAddress')}, ${v('ngoLGA')}, ${v('ngoState')}<br>
+             <b>Established:</b> ${fmtDOB(v('ngoEstDate'))} | <b>Newspaper:</b> ${v('ngoPaper')}<br>
+             <b>Members:</b> ${v('ngoMembership')} | <b>AGM Month:</b> ${v('ngoAGM')}<br>
+             <b>Constitution:</b> ${v('ngoHasConstitution')}<br>
+             <b>Trustees (${trusteeCount}):</b>${trusteesText}<br><br>
              <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
   } else if (currentType === 'compliance') {
     html += `<b>RC/BN Number:</b> ${v('compRCNum')}<br>
              <b>Registered Name:</b> ${v('compBizName')}<br>
+             <b>Registration Type:</b> ${v('compRegCategory')}<br>
+             <b>Original Registration Date:</b> ${fmtDOB(v('compOriginalDate'))}<br>
              <b>Filing Required:</b> ${v('compType')}<br>
              <b>Year(s):</b> ${v('compYears')}<br>
+             <b>Current Address:</b> ${v('compCurrentAddress')}<br>
+             <b>Authorizing Person:</b> ${v('compDirectorName')} | ID: ${v('compIDType')} ${v('compIDNum')}<br>
              <b>Details:</b> ${v('compDetails')}<br><br>
              <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
   } else if (currentType === 'search') {
@@ -1597,8 +1548,9 @@ window.buildSummary = function() {
              <b>Name 2:</b> ${v('searchName2')}<br>
              <b>Name 3:</b> ${v('searchName3')}<br>
              <b>Intended Registration:</b> ${v('searchRegType')}<br>
-             <b>Principal Category:</b> ${document.getElementById('searchPrincipal')?.options[document.getElementById('searchPrincipal')?.selectedIndex]?.text || '—'}<br>
-             <b>Specific Activity:</b> ${v('searchSpecific')}<br><br>
+             <b>Principal Category:</b> ${document.getElementById('searchPrincipal')?.options[document.getElementById('searchPrincipal')?.selectedIndex]?.text||'—'}<br>
+             <b>Specific Activity:</b> ${v('searchSpecific')}<br>
+             <b>Concerns:</b> ${v('searchConcerns')}<br><br>
              <b>Contact:</b> ${v('fname')} ${v('lname')} | ${v('phone')} | ${v('email')}`;
   }
   document.getElementById('summary').innerHTML = html;
@@ -1610,77 +1562,76 @@ window.submitForm = async function() {
   const btn = document.getElementById('btnSubmit');
   btn.textContent = 'Sending…'; btn.disabled = true;
   const cfg = typeConfig[currentType] || {};
-  const n = parseInt(document.getElementById('llcNumDirectors')?.value) || 0;
-  let dirInfo = '';
-  for (let i=1;i<=n;i++) dirInfo += `\nDir ${i}: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | ${v('dir'+i+'IDType')} ${v('dir'+i+'IDNum')} | Shares: ${v('dir'+i+'Shares')}`;
 
-  // Resolve principal category label and specific activity for email
-  let principalLabel = '—';
-  let specificActivity = '—';
-  if (currentType === 'bn') {
-    const sel = document.getElementById('bnPrincipal');
-    principalLabel = sel?.options[sel?.selectedIndex]?.text || '—';
-    specificActivity = v('bnSpecific');
-  } else if (currentType === 'llc') {
-    const sel = document.getElementById('llcPrincipal');
-    principalLabel = sel?.options[sel?.selectedIndex]?.text || '—';
-    specificActivity = v('llcSpecific');
-  } else if (currentType === 'partnership') {
-    const sel = document.getElementById('partPrincipal');
-    principalLabel = sel?.options[sel?.selectedIndex]?.text || '—';
-    specificActivity = v('partSpecific');
-  } else if (currentType === 'search') {
-    const sel = document.getElementById('searchPrincipal');
-    principalLabel = sel?.options[sel?.selectedIndex]?.text || '—';
-    specificActivity = v('searchSpecific');
-  }
+  let principalLabel = '—', specificActivity = '—';
+  if (currentType==='bn') { const s=document.getElementById('bnPrincipal'); principalLabel=s?.options[s?.selectedIndex]?.text||'—'; specificActivity=v('bnSpecific'); }
+  else if (currentType==='llc') { const s=document.getElementById('llcPrincipal'); principalLabel=s?.options[s?.selectedIndex]?.text||'—'; specificActivity=v('llcSpecific'); }
+  else if (currentType==='partnership') { const s=document.getElementById('partPrincipal'); principalLabel=s?.options[s?.selectedIndex]?.text||'—'; specificActivity=v('partSpecific'); }
+  else if (currentType==='search') { const s=document.getElementById('searchPrincipal'); principalLabel=s?.options[s?.selectedIndex]?.text||'—'; specificActivity=v('searchSpecific'); }
 
-  // Build full extra_details string
   let extraDetails = '—';
-  if (currentType === 'llc') {
-    extraDetails = `Share Capital: ₦${v('llcShareCapital')}\nCompany Secretary: ${v('llcSecretary')}${dirInfo}`;
-  } else if (currentType === 'ngo') {
-    extraDetails = `Org Type: ${v('ngoType')}\nAims & Objectives: ${v('ngoObjectives')}\nEstablished: ${fmtDOB(v('ngoEstDate'))}\nNewspaper: ${v('ngoPaper')}\n\nTrustee 1: ${v('trustee1Name')} | DOB: ${fmtDOB(v('trustee1DOB'))} | Occ: ${v('trustee1Occ')} | Nationality: ${v('trustee1Nat')}\nID: ${v('trustee1IDType')} — ${v('trustee1IDNum')} | Address: ${v('trustee1Address')}\n\nTrustee 2: ${v('trustee2Name')} | DOB: ${fmtDOB(v('trustee2DOB'))} | Occ: ${v('trustee2Occ')} | Nationality: ${v('trustee2Nat')}\nID: ${v('trustee2IDType')} — ${v('trustee2IDNum')} | Address: ${v('trustee2Address')}`;
-  } else if (currentType === 'partnership') {
-    extraDetails = `Partner 1: ${v('part1Name')}\nDOB: ${fmtDOB(v('part1DOB'))} | Nationality: ${v('part1Nationality')} | Phone: ${v('part1Phone')}\nID: ${v('part1IDType')} — ${v('part1IDNum')}\nAddress: ${v('part1Address')}\n\nPartner 2: ${v('part2Name')}\nDOB: ${fmtDOB(v('part2DOB'))} | Nationality: ${v('part2Nationality')} | Phone: ${v('part2Phone')}\nID: ${v('part2IDType')} — ${v('part2IDNum')}\nAddress: ${v('part2Address')}`;
-  } else if (currentType === 'compliance') {
-    extraDetails = `Filing Type: ${v('compType')}\nYear(s): ${v('compYears')}\nRC/BN No.: ${v('compRCNum')}\nRegistered Name: ${v('compBizName')}\nDetails: ${v('compDetails')}`;
-  } else if (currentType === 'search') {
-    extraDetails = `Intended Registration Type: ${v('searchRegType')}`;
+  if (currentType==='llc') {
+    let dirs='';
+    for(let i=1;i<=directorCount;i++){
+      const el=document.getElementById('dirBlock_'+i);
+      if(el) dirs+=`\nPerson ${i} [${v('dir'+i+'Role')}]: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | NIN: ${v('dir'+i+'NIN')} | ${v('dir'+i+'IDType')} ${v('dir'+i+'NIN')} | Shares: ${v('dir'+i+'Shares')} (${v('dir'+i+'Pct')}) | Phone: ${v('dir'+i+'Phone')}`;
+    }
+    extraDetails = `Share Capital: ₦${v('llcShareCapital')} | Shares: ${v('llcNumShares')} | Type: ${v('llcShareType')}\nCompany Email: ${v('llcEmail')}${dirs}`;
+  } else if (currentType==='ngo') {
+    let trs='';
+    for(let i=1;i<=trusteeCount;i++){
+      const el=document.getElementById('trusteeBlock_'+i);
+      if(el) trs+=`\nTrustee ${i}: ${v('trustee'+i+'Name')} | DOB: ${fmtDOB(v('trustee'+i+'DOB'))} | ${v('trustee'+i+'Occ')} | ID: ${v('trustee'+i+'IDType')} ${v('trustee'+i+'IDNum')} | Phone: ${v('trustee'+i+'Phone')}`;
+    }
+    extraDetails = `Org Type: ${v('ngoType')}\nObjectives: ${v('ngoObjectives')}\nEstablished: ${fmtDOB(v('ngoEstDate'))}\nNewspaper: ${v('ngoPaper')}\nMembers: ${v('ngoMembership')}\nAGM: ${v('ngoAGM')}\nConstitution: ${v('ngoHasConstitution')}${trs}`;
+  } else if (currentType==='partnership') {
+    let pts='';
+    for(let i=1;i<=partnerCount;i++){
+      const el=document.getElementById('partnerBlock_'+i);
+      if(el) pts+=`\nPartner ${i}: ${v('part'+i+'Name')} | DOB: ${fmtDOB(v('part'+i+'DOB'))} | ${v('part'+i+'IDType')} ${v('part'+i+'IDNum')} | Share: ${v('part'+i+'Share')} | Phone: ${v('part'+i+'Phone')}`;
+    }
+    extraDetails = `Commencement: ${fmtDOB(v('partCommenceDate'))}${pts}`;
+  } else if (currentType==='compliance') {
+    extraDetails = `Filing: ${v('compType')}\nRC/BN: ${v('compRCNum')}\nReg Type: ${v('compRegCategory')}\nOriginal Date: ${fmtDOB(v('compOriginalDate'))}\nYear(s): ${v('compYears')}\nCurrent Address: ${v('compCurrentAddress')}\nNew Address: ${v('compNewAddress')}\nAuthorizing Person: ${v('compDirectorName')} | ${v('compIDType')} ${v('compIDNum')}\nDetails: ${v('compDetails')}`;
+  } else if (currentType==='search') {
+    extraDetails = `Intended Type: ${v('searchRegType')}\nConcerns: ${v('searchConcerns')}`;
   }
 
   const params = {
-    ref_number: ref,
-    submitted_at: new Date().toLocaleString('en-NG', { timeZone: 'Africa/Lagos' }),
-    reg_type: cfg.label || currentType,
-    full_name: `${v('fname')} ${v('lname')}`,
-    client_email: v('email'),
-    phone: v('phone'),
-    whatsapp: v('whatsapp'),
-    notes: v('notes'),
-    business_name_1: currentType==='bn'?v('bName1'):currentType==='llc'?v('llcName1'):currentType==='partnership'?v('partName1'):currentType==='ngo'?v('ngoName1'):currentType==='search'?v('searchName1'):v('compBizName'),
-    business_name_2: currentType==='bn'?v('bName2'):currentType==='llc'?v('llcName2'):currentType==='partnership'?v('partName2'):currentType==='ngo'?v('ngoName2'):currentType==='search'?v('searchName2'):'—',
-    business_name_3: currentType==='bn'?v('bName3'):currentType==='llc'?v('llcName3'):currentType==='partnership'?v('partName3'):currentType==='ngo'?v('ngoName3'):currentType==='search'?v('searchName3'):'—',
-    principal_category: principalLabel,
-    specific_activity: specificActivity,
-    nature: (currentType === 'llc' && v('llcObjects') !== '—') ? v('llcObjects') : '—',
-    biz_address: currentType==='bn'?v('bizAddress'):currentType==='llc'?v('llcAddress'):currentType==='partnership'?v('partAddress'):currentType==='ngo'?v('ngoAddress'):currentType==='compliance'?v('compRCNum')+' — '+v('compBizName'):'N/A',
-    dob: fmtDOB(v('dob')),
-    nationality: v('nationality') !== '—' ? v('nationality') : 'Nigerian',
-    res_address: currentType==='bn'?v('resAddress'):v('applicantRole'),
-    id_type: v('idType'),
-    id_number: v('idNum'),
-    extra_details: extraDetails,
-    to_email: EMAIL_1
+    ref_number:ref,
+    submitted_at:new Date().toLocaleString('en-NG',{timeZone:'Africa/Lagos'}),
+    reg_type:cfg.label||currentType,
+    full_name:`${v('fname')} ${v('lname')}`,
+    client_email:v('email'),
+    phone:v('phone'),
+    whatsapp:v('whatsapp'),
+    notes:v('notes'),
+    business_name_1:currentType==='bn'?v('bName1'):currentType==='llc'?v('llcName1'):currentType==='partnership'?v('partName1'):currentType==='ngo'?v('ngoName1'):currentType==='search'?v('searchName1'):v('compBizName'),
+    business_name_2:currentType==='bn'?v('bName2'):currentType==='llc'?v('llcName2'):currentType==='partnership'?v('partName2'):currentType==='ngo'?v('ngoName2'):currentType==='search'?v('searchName2'):'—',
+    business_name_3:currentType==='bn'?v('bName3'):currentType==='llc'?v('llcName3'):currentType==='partnership'?v('partName3'):currentType==='ngo'?v('ngoName3'):currentType==='search'?v('searchName3'):'—',
+    principal_category:principalLabel,
+    specific_activity:specificActivity,
+    nature:(currentType==='llc'&&v('llcObjects')!=='—')?v('llcObjects'):'—',
+    biz_address:currentType==='bn'?`${v('bizAddress')}, ${v('bnLGA')}, ${v('bnState')}`:currentType==='llc'?`${v('llcAddress')}, ${v('llcLGA')}, ${v('llcState')}`:currentType==='partnership'?`${v('partAddress')}, ${v('partState')}`:currentType==='ngo'?`${v('ngoAddress')}, ${v('ngoLGA')}, ${v('ngoState')}`:currentType==='compliance'?v('compCurrentAddress'):'N/A',
+    dob:currentType==='bn'?fmtDOB(v('dob')):'—',
+    nationality:currentType==='bn'?v('nationality'):'Nigerian',
+    res_address:currentType==='bn'?v('resAddress'):v('applicantRole'),
+    id_type:currentType==='bn'?v('idType'):'—',
+    id_number:currentType==='bn'?v('idNum'):'—',
+    extra_details:extraDetails,
+    to_email:EMAIL_1
   };
+
   const waMsg = encodeURIComponent(
-    `Hi DANNIT ENTERPRISES! 👋\n\nI just submitted my registration form.\n\n` +
-    `📋 *Ref:* ${ref}\n👤 *Name:* ${params.full_name}\n🏢 *Type:* ${params.reg_type}\n📝 *Business:* ${params.business_name_1}\n🏭 *Activity:* ${specificActivity !== '—' ? specificActivity : principalLabel}\n\nReady to send my documents!`
+    `Hi DANNIT ENTERPRISES! 👋\n\nI just submitted my registration form.\n\n`+
+    `📋 *Ref:* ${ref}\n👤 *Name:* ${params.full_name}\n🏢 *Type:* ${params.reg_type}\n📝 *Business:* ${params.business_name_1}\n🏭 *Activity:* ${specificActivity!=='—'?specificActivity:principalLabel}\n\nReady to send my documents!`
   );
+
   try {
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { ...params, to_email: EMAIL_1 });
-    if (EMAIL_2 && EMAIL_2.trim()) await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { ...params, to_email: EMAIL_2 });
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {...params, to_email:EMAIL_1});
+    if (EMAIL_2&&EMAIL_2.trim()) await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {...params, to_email:EMAIL_2});
   } catch(e) { console.error('EmailJS error:', e); }
+
   document.getElementById('waLink').href = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
   document.getElementById('refNum').textContent = 'REF: ' + ref;
   document.getElementById('overlay').classList.add('open');
@@ -1712,16 +1663,13 @@ window.sendViaEmail = function() {
   setTimeout(()=>document.getElementById('contactSuccess').style.display='none',4000);
 };
 
-// FAQ
 window.toggleFAQ = function(item) {
   const isOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if (!isOpen) item.classList.add('open');
 };
 
-// ══════════════════════════════
-// CHATBOT
-// ══════════════════════════════
+// ══ CHATBOT ══
 const SYSTEM_PROMPT = `You are the DANNIT ENTERPRISES assistant — a warm, knowledgeable CAC registration expert in Nigeria.
 
 ABOUT DANNIT ENTERPRISES:
@@ -1732,8 +1680,8 @@ ABOUT DANNIT ENTERPRISES:
 - Hours: Monday–Saturday, 8am–6pm WAT
 
 KEY FACTS:
-- Business Name: for 1 person, cheapest & simplest, needs ID + passport photo + utility bill, 3–5 working days
-- LLC: min 2 directors, share capital min ₦100,000, better legal protection, 7–14 working days
+- Business Name: for 1 person, cheapest & simplest, needs ID + passport photo + utility bill + NIN, 3–5 working days
+- LLC: min 2 directors, share capital min ₦100,000, better legal protection, 7–14 working days. PSC (Person with Significant Control) = anyone with 25%+ shares or voting rights — required to be declared under CAMA 2020
 - Partnership: 2+ partners, each needs ID + photo, 3–5 days
 - Incorporated Trustees: NGOs, churches, associations — min 2 trustees, constitution, newspaper notice required, 3–6 weeks
 - Compliance: annual returns, director changes, address updates for already-registered entities
@@ -1750,7 +1698,7 @@ window.toggleChat = function() {
   document.getElementById('chatWindow').classList.toggle('open', chatOpen);
   document.getElementById('chatBadge').style.display = chatOpen ? 'none' : 'block';
   if (chatOpen && !chatStarted) initChat();
-  if (chatOpen) setTimeout(() => document.getElementById('chatInput').focus(), 300);
+  if (chatOpen) setTimeout(()=>document.getElementById('chatInput').focus(), 300);
 };
 
 function initChat() {
@@ -1776,7 +1724,7 @@ function showTyping() {
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
 }
-function removeTyping() { const t = document.getElementById('typingEl'); if(t) t.remove(); }
+function removeTyping() { const t=document.getElementById('typingEl'); if(t) t.remove(); }
 
 function showSugs(list) {
   document.getElementById('chatSugs').innerHTML = list.map(s =>
@@ -1791,7 +1739,7 @@ window.handleSug = function(text) {
   }
   if (text.includes('Start registration') || text.includes('→')) {
     toggleChat();
-    document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('register').scrollIntoView({ behavior:'smooth' });
     return;
   }
   document.getElementById('chatSugs').innerHTML = '';
@@ -1808,35 +1756,32 @@ window.sendChat = function() {
 
 async function processChat(userText) {
   addMsg('user', userText);
-  chatHistory.push({ role: 'user', content: userText });
+  chatHistory.push({ role:'user', content:userText });
   showTyping();
   try {
     const res = await fetch('https://dannit-chat.lawaloyindamolashinaayomi.workers.dev', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        max_tokens: 300,
-        messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
-          ...chatHistory
-        ]
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'llama-3.3-70b-versatile',
+        max_tokens:300,
+        messages:[{role:'system',content:SYSTEM_PROMPT},...chatHistory]
       })
     });
     const data = await res.json();
     const reply = data.choices?.[0]?.message?.content || "I'm having trouble connecting. Please reach us directly on WhatsApp: 07037374772 💬";
     removeTyping();
     addMsg('bot', reply);
-    chatHistory.push({ role: 'assistant', content: reply });
+    chatHistory.push({ role:'assistant', content:reply });
     const low = userText.toLowerCase();
-    if (low.includes('cost') || low.includes('price') || low.includes('fee') || low.includes('how much')) {
-      showSugs(['Chat us on WhatsApp', 'How long does it take?', 'Start registration →']);
+    if (low.includes('cost')||low.includes('price')||low.includes('fee')||low.includes('how much')) {
+      showSugs(['Chat us on WhatsApp','How long does it take?','Start registration →']);
     } else if (low.includes('doc')) {
-      showSugs(['Business Name docs', 'LLC documents', 'NGO / Church docs', 'Start registration →']);
-    } else if (low.includes('long') || low.includes('days') || low.includes('time')) {
-      showSugs(['Start registration →', 'What documents needed?', 'Chat us on WhatsApp']);
+      showSugs(['Business Name docs','LLC documents','NGO / Church docs','Start registration →']);
+    } else if (low.includes('long')||low.includes('days')||low.includes('time')) {
+      showSugs(['Start registration →','What documents needed?','Chat us on WhatsApp']);
     } else {
-      showSugs(['Start registration →', 'Chat us on WhatsApp', 'What documents needed?']);
+      showSugs(['Start registration →','Chat us on WhatsApp','What documents needed?']);
     }
   } catch(e) {
     removeTyping();
