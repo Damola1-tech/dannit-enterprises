@@ -107,6 +107,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .fg input,.fg select,.fg textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--g2);background:var(--w);color:var(--tx);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s,box-shadow .2s;border-radius:2px}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gb);box-shadow:0 0 0 3px rgba(34,136,63,.08)}
 .fg textarea{resize:vertical;min-height:75px}
+.fg input[type="date"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;min-height:44px;line-height:1.4;padding:.75rem 1rem;box-sizing:border-box;display:block;width:100%}
+.fg input[type="date"]::-webkit-date-and-time-value{text-align:left;padding:0}
+.fg input[type="date"]::-webkit-calendar-picker-indicator{opacity:.5;cursor:pointer;margin-left:auto}
 .fgh{font-size:.73rem;color:var(--g4);margin-top:.3rem;font-weight:300}
 .fgr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .fgr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
@@ -238,6 +241,7 @@ footer{background:var(--gd);padding:2.5rem 4rem;display:flex;align-items:center;
   .faq-grid{grid-template-columns:1fr}
   #contact{padding:4rem 1.5rem!important}
   .contact-grid{grid-template-columns:1fr!important;gap:2.5rem!important}
+  .fg input[type="date"]{font-size:16px;min-height:48px;padding:.8rem 1rem}
 }
 </style>
 </head>
@@ -1574,27 +1578,30 @@ window.submitForm = async function() {
     let dirs='';
     for(let i=1;i<=directorCount;i++){
       const el=document.getElementById('dirBlock_'+i);
-      if(el) dirs+=`\nPerson ${i} [${v('dir'+i+'Role')}]: ${v('dir'+i+'Name')} | DOB: ${fmtDOB(v('dir'+i+'DOB'))} | NIN: ${v('dir'+i+'NIN')} | ${v('dir'+i+'IDType')} ${v('dir'+i+'NIN')} | Shares: ${v('dir'+i+'Shares')} (${v('dir'+i+'Pct')}) | Phone: ${v('dir'+i+'Phone')}`;
+      const pscStatus = document.getElementById('dir'+i+'PSCyes')?.checked ? 'YES — PSC' : document.getElementById('dir'+i+'PSCno')?.checked ? 'Not a PSC' : 'NOT ANSWERED';
+      if(el) dirs+=`\n── Person ${i} ──\nRole: ${v('dir'+i+'Role')} | PSC: ${pscStatus}\nName: ${v('dir'+i+'Name')}\nDOB: ${fmtDOB(v('dir'+i+'DOB'))} | Gender: ${v('dir'+i+'Gender')} | Occupation: ${v('dir'+i+'Occ')}\nID Type: ${v('dir'+i+'IDType')} | NIN/ID No.: ${v('dir'+i+'NIN')}\nPhone: ${v('dir'+i+'Phone')} | Email: ${v('dir'+i+'Email')}\nAddress: ${v('dir'+i+'Address')}\nShares: ${v('dir'+i+'Shares')} | Ownership: ${v('dir'+i+'Pct')}\n`;
     }
-    extraDetails = `Share Capital: ₦${v('llcShareCapital')} | Shares: ${v('llcNumShares')} | Type: ${v('llcShareType')}\nCompany Email: ${v('llcEmail')}${dirs}`;
+    extraDetails = `Share Capital: \u20A6${v('llcShareCapital')} | No. of Shares: ${v('llcNumShares')} | Share Type: ${v('llcShareType')}\nCompany Email: ${v('llcEmail')}\nAdditional Objects: ${v('llcObjects')||'—'}\n${dirs}`;
   } else if (currentType==='ngo') {
     let trs='';
     for(let i=1;i<=trusteeCount;i++){
       const el=document.getElementById('trusteeBlock_'+i);
-      if(el) trs+=`\nTrustee ${i}: ${v('trustee'+i+'Name')} | DOB: ${fmtDOB(v('trustee'+i+'DOB'))} | ${v('trustee'+i+'Occ')} | ID: ${v('trustee'+i+'IDType')} ${v('trustee'+i+'IDNum')} | Phone: ${v('trustee'+i+'Phone')}`;
+      if(el) trs+=`\n── Trustee ${i} ──\nName: ${v('trustee'+i+'Name')}\nDOB: ${fmtDOB(v('trustee'+i+'DOB'))} | Gender: ${v('trustee'+i+'Gender')} | Occupation: ${v('trustee'+i+'Occ')}\nID Type: ${v('trustee'+i+'IDType')} | NIN/ID No.: ${v('trustee'+i+'IDNum')}\nPhone: ${v('trustee'+i+'Phone')} | Email: ${v('trustee'+i+'Email')}\nAddress: ${v('trustee'+i+'Address')}\n`;
     }
-    extraDetails = `Org Type: ${v('ngoType')}\nObjectives: ${v('ngoObjectives')}\nEstablished: ${fmtDOB(v('ngoEstDate'))}\nNewspaper: ${v('ngoPaper')}\nMembers: ${v('ngoMembership')}\nAGM: ${v('ngoAGM')}\nConstitution: ${v('ngoHasConstitution')}${trs}`;
+    extraDetails = `Org Type: ${v('ngoType')}\nAims & Objectives: ${v('ngoObjectives')}\nDate Established: ${fmtDOB(v('ngoEstDate'))}\nNewspaper for Publication: ${v('ngoPaper')}\nTotal Membership: ${v('ngoMembership')}\nAGM Frequency: ${v('ngoAGM')}\nHas Constitution: ${v('ngoHasConstitution')}\n${trs}`;
   } else if (currentType==='partnership') {
     let pts='';
     for(let i=1;i<=partnerCount;i++){
       const el=document.getElementById('partnerBlock_'+i);
-      if(el) pts+=`\nPartner ${i}: ${v('part'+i+'Name')} | DOB: ${fmtDOB(v('part'+i+'DOB'))} | ${v('part'+i+'IDType')} ${v('part'+i+'IDNum')} | Share: ${v('part'+i+'Share')} | Phone: ${v('part'+i+'Phone')}`;
+      if(el) pts+=`\n── Partner ${i} ──\nName: ${v('part'+i+'Name')}\nDOB: ${fmtDOB(v('part'+i+'DOB'))} | Gender: ${v('part'+i+'Gender')} | Occupation: ${v('part'+i+'Occ')}\nID Type: ${v('part'+i+'IDType')} | NIN/ID No.: ${v('part'+i+'IDNum')}\nProfit/Loss Share: ${v('part'+i+'Share')}\nPhone: ${v('part'+i+'Phone')} | Email: ${v('part'+i+'Email')}\nAddress: ${v('part'+i+'Address')}\n`;
     }
-    extraDetails = `Commencement: ${fmtDOB(v('partCommenceDate'))}${pts}`;
+    extraDetails = `Date of Commencement: ${fmtDOB(v('partCommenceDate'))}\n${pts}`;
   } else if (currentType==='compliance') {
-    extraDetails = `Filing: ${v('compType')}\nRC/BN: ${v('compRCNum')}\nReg Type: ${v('compRegCategory')}\nOriginal Date: ${fmtDOB(v('compOriginalDate'))}\nYear(s): ${v('compYears')}\nCurrent Address: ${v('compCurrentAddress')}\nNew Address: ${v('compNewAddress')}\nAuthorizing Person: ${v('compDirectorName')} | ${v('compIDType')} ${v('compIDNum')}\nDetails: ${v('compDetails')}`;
+    extraDetails = `Filing Type: ${v('compType')}\nRC/BN Number: ${v('compRCNum')}\nRegistered Business/Co. Name: ${v('compBizName')}\nRegistration Category: ${v('compRegCategory')}\nOriginal Registration Date: ${fmtDOB(v('compOriginalDate'))}\nYear(s) of Annual Return: ${v('compYears')}\nCurrent Registered Address: ${v('compCurrentAddress')}\nNew Address (if change): ${v('compNewAddress')}\nAuthorizing Person: ${v('compDirectorName')} | ID Type: ${v('compIDType')} | ID No.: ${v('compIDNum')}\nDetails/Instructions: ${v('compDetails')}`;
   } else if (currentType==='search') {
-    extraDetails = `Intended Type: ${v('searchRegType')}\nConcerns: ${v('searchConcerns')}`;
+    extraDetails = `Intended Registration Type: ${v('searchRegType')}\nName Similarity Concerns: ${v('searchConcerns')}`;
+  } else if (currentType==='bn') {
+    extraDetails = `Proprietor: ${v('fname')} ${v('lname')}\nDOB: ${fmtDOB(v('dob'))} | Gender: ${v('bnGender')} | Nationality: ${v('nationality')}\nOccupation: ${v('bnOccupation')}\nID Type: ${v('idType')} | NIN/ID No.: ${v('idNum')}\nResidential Address: ${v('resAddress')}`;
   }
 
   const params = {
@@ -1618,6 +1625,8 @@ window.submitForm = async function() {
     res_address:currentType==='bn'?v('resAddress'):v('applicantRole'),
     id_type:currentType==='bn'?v('idType'):'—',
     id_number:currentType==='bn'?v('idNum'):'—',
+    gender:currentType==='bn'?v('bnGender'):'—',
+    occupation:currentType==='bn'?v('bnOccupation'):'—',
     extra_details:extraDetails,
     to_email:EMAIL_1
   };
