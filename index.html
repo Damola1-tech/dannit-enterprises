@@ -1131,15 +1131,13 @@ async function logToGoogleSheet(d){
     console.warn('Google Script URL not configured yet.');return;
   }
   try{
-    const resp=await fetch(GOOGLE_SCRIPT_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({action:'new_submission',data:d})
-    });
+    // Use FormData to avoid CORS preflight — Apps Script handles this natively
+    const form=new FormData();
+    form.append('payload',JSON.stringify({action:'new_submission',data:d}));
+    const resp=await fetch(GOOGLE_SCRIPT_URL,{method:'POST',body:form});
     const result=await resp.json();
     if(result.ok&&result.folderLink){
-      // Store folder link for use in upload modal
-      lastSubmissionData.driveFolderLink=result.folderLink;
+      if(lastSubmissionData)lastSubmissionData.driveFolderLink=result.folderLink;
       console.log('Sheet logged. Drive folder:',result.folderLink);
     }
   }catch(e){console.error('Google Sheet log error:',e);}
@@ -1325,11 +1323,9 @@ window.submitUploadedDocs=async function(){
   progressBar.style.width='70%';
   progressLabel.textContent='Uploading to Drive…';
   try{
-    const resp=await fetch(GOOGLE_SCRIPT_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({action:'upload_documents',data:{ref,files:base64Files}})
-    });
+    const form=new FormData();
+    form.append('payload',JSON.stringify({action:'upload_documents',data:{ref,files:base64Files}}));
+    const resp=await fetch(GOOGLE_SCRIPT_URL,{method:'POST',body:form});
     const result=await resp.json();
     progressBar.style.width='100%';
     progressLabel.textContent='Done!';
